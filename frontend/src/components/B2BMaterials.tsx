@@ -54,7 +54,7 @@ export default function B2BMaterials() {
 
   if (unlock) {
     return (
-      <div className="grid-3">
+      <div className="grid-2">
         {LOCKED_ITEMS.map((item, i) => {
           const m = unlock.materials[i];
           return (
@@ -80,7 +80,7 @@ export default function B2BMaterials() {
   }
 
   return (
-    <div className="grid-3">
+    <div className="grid-2">
       {LOCKED_ITEMS.map((item) => (
         <div className="cell b2b-locked" key={item.title}>
           <span className="b2b-lock-icon" aria-hidden="true">
