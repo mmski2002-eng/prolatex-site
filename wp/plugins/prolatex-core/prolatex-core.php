@@ -28,6 +28,7 @@ require_once PROLATEX_CORE_DIR . 'includes/class-security.php';
 require_once PROLATEX_CORE_DIR . 'includes/class-rest-leads.php';
 require_once PROLATEX_CORE_DIR . 'includes/class-rest-data.php';
 require_once PROLATEX_CORE_DIR . 'includes/class-articles.php';
+require_once PROLATEX_CORE_DIR . 'includes/class-lead-settings.php';
 
 /**
  * Инициализация модулей плагина.
@@ -39,6 +40,7 @@ function prolatex_core_init() {
 	Prolatex\Rest_Leads::instance();
 	Prolatex\Rest_Data::instance();
 	Prolatex\Articles::instance();
+	Prolatex\Lead_Settings::instance();
 }
 add_action( 'plugins_loaded', 'prolatex_core_init' );
 

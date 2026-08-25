@@ -136,6 +136,25 @@ class Rest_Leads {
 		update_post_meta( $post_id, 'lead_user_agent', sanitize_text_field( (string) ( $_SERVER['HTTP_USER_AGENT'] ?? '' ) ) );
 		update_post_meta( $post_id, 'lead_created_at', current_time( 'mysql' ) );
 
+		// Уведомление на e-mail получателя заявок.
+		$to = Lead_Settings::get_email();
+		if ( $to && is_email( $to ) ) {
+			$lines = array(
+				'Новая заявка с сайта Про-Латекс',
+				'',
+				'Имя: ' . $name,
+				'Телефон: ' . $phone,
+				'E-mail: ' . ( $email ? $email : '—' ),
+				'Товар: ' . ( $product ? $product : '—' ),
+				'Размер: ' . ( $size ? $size : '—' ),
+				'Сообщение: ' . ( $message ? $message : '—' ),
+				'IP: ' . $ip,
+				'Время: ' . current_time( 'mysql' ),
+			);
+			$subject = 'Заявка с сайта: ' . $name . ( $product ? ' — ' . $product : '' );
+			wp_mail( $to, $subject, implode( "\n", $lines ) );
+		}
+
 		return new \WP_REST_Response(
 			array(
 				'success' => true,
