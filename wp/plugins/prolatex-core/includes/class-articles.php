@@ -50,7 +50,7 @@ class Articles {
 	private function revalidate( $slug ) {
 		$url = defined( 'PROLATEX_NEXT_URL' ) ? PROLATEX_NEXT_URL : 'http://127.0.0.1:3050';
 		wp_remote_post(
-			$url . '/api/revalidate',
+			$url . '/api/revalidate/',
 			array(
 				'timeout'  => 4,
 				'blocking' => false,
