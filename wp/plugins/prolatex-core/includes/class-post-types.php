@@ -43,7 +43,7 @@ class Post_Types {
 				'menu_icon'           => 'dashicons-slides',
 				'supports'            => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
 				'show_in_menu'        => true,
-				'menu_position'       => 20,
+				'menu_position'       => 22,
 			)
 		);
 
@@ -60,7 +60,7 @@ class Post_Types {
 				'menu_icon'           => 'dashicons-heart',
 				'supports'            => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
 				'show_in_menu'        => true,
-				'menu_position'       => 21,
+				'menu_position'       => 23,
 			)
 		);
 
@@ -77,7 +77,7 @@ class Post_Types {
 				'menu_icon'           => 'dashicons-layout',
 				'supports'            => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
 				'show_in_menu'        => true,
-				'menu_position'       => 22,
+				'menu_position'       => 24,
 			)
 		);
 
@@ -95,7 +95,7 @@ class Post_Types {
 				'menu_icon'           => 'dashicons-star-filled',
 				'supports'            => array( 'title', 'editor', 'custom-fields' ),
 				'show_in_menu'        => true,
-				'menu_position'       => 23,
+				'menu_position'       => 25,
 			)
 		);
 
@@ -115,7 +115,7 @@ class Post_Types {
 				'supports'            => array( 'title', 'custom-fields' ),
 				'capability_type'     => 'post',
 				'map_meta_cap'        => true,
-				'menu_position'       => 24,
+				'menu_position'       => 21,
 			)
 		);
 	}
