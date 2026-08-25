@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ARTICLES } from "@/data/articles";
-import {ogMeta } from "@/lib/seo";
+import { ogMeta } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { articleCover } from "@/lib/covers";
+import { getBlogArticles } from "@/lib/blog";
+
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Блог о натуральном латексе: гайды и статьи",
@@ -14,7 +16,8 @@ export const metadata: Metadata = {
   openGraph: ogMeta({ url: "/blog/" }),
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const articles = await getBlogArticles();
   return (
     <>
       <Breadcrumbs items={[{ name: "Блог", path: "/blog/" }]} />
@@ -30,10 +33,15 @@ export default function BlogPage() {
       <section style={{ paddingTop: 8 }}>
         <div className="wrap">
           <div className="blog-grid">
-            {ARTICLES.map((a) => (
+            {articles.map((a) => (
               <Link className="blog-card" href={`/blog/${a.slug}/`} key={a.slug}>
                 <span className="blog-card-media">
-                  <Image src={articleCover(a.slug)} alt="" fill sizes="(max-width: 640px) 100vw, 380px" />
+                  {a.cover ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={a.cover} alt="" loading="lazy" />
+                  ) : (
+                    <Image src={articleCover(a.slug)} alt="" fill sizes="(max-width: 640px) 100vw, 380px" />
+                  )}
                 </span>
                 <span className="blog-card-body">
                   <span className="blog-tag">{a.tag}</span>

@@ -457,6 +457,33 @@ header.site-header {
   gap: 14px;
   flex-wrap: wrap;
 }
+/* Контент статьи из WordPress (HTML) — наследует типографику .article-body. */
+.article-html img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  margin: 24px 0;
+}
+.article-html figure {
+  margin: 24px 0;
+}
+.article-html table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+.article-html th,
+.article-html td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+}
+.article-html th {
+  background: var(--sand-tint);
+  font-weight: 700;
+}
 .article-date {
   font-size: 13px;
   color: var(--gray-soft);

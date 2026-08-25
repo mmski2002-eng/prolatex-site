@@ -27,6 +27,7 @@ require_once PROLATEX_CORE_DIR . 'includes/class-meta.php';
 require_once PROLATEX_CORE_DIR . 'includes/class-security.php';
 require_once PROLATEX_CORE_DIR . 'includes/class-rest-leads.php';
 require_once PROLATEX_CORE_DIR . 'includes/class-rest-data.php';
+require_once PROLATEX_CORE_DIR . 'includes/class-articles.php';
 
 /**
  * Инициализация модулей плагина.
@@ -37,6 +38,7 @@ function prolatex_core_init() {
 	Prolatex\Security::instance();
 	Prolatex\Rest_Leads::instance();
 	Prolatex\Rest_Data::instance();
+	Prolatex\Articles::instance();
 }
 add_action( 'plugins_loaded', 'prolatex_core_init' );
 
@@ -52,6 +54,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 function prolatex_core_activate() {
 	Prolatex\Post_Types::instance()->register_post_types();
 	Prolatex\Post_Types::instance()->register_taxonomies();
+	Prolatex\Articles::instance()->register();
 	flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'prolatex_core_activate' );

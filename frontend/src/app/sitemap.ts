@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllMattresses, getMattressesData } from "@/lib/api";
-import { ARTICLES } from "@/data/articles";
+import { getBlogArticles } from "@/lib/blog";
 import { SITE_URL } from "@/lib/seo";
 
 const STATIC_PATHS = [
@@ -22,9 +22,10 @@ const STATIC_PATHS = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [data, models] = await Promise.all([
+  const [data, models, articles] = await Promise.all([
     getMattressesData(),
     getAllMattresses(),
+    getBlogArticles(),
   ]);
   const now = new Date();
 
@@ -49,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const articleEntries: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
+  const articleEntries: MetadataRoute.Sitemap = articles.map((a) => ({
     url: `${SITE_URL}/blog/${a.slug}/`,
     lastModified: a.dateISO,
     changeFrequency: "yearly",
