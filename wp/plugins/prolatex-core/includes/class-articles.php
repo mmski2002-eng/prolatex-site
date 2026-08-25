@@ -91,7 +91,7 @@ class Articles {
 				'show_in_menu'        => true,
 				'show_in_rest'        => true,
 				'menu_icon'           => 'dashicons-edit-page',
-				'menu_position'       => 20,
+				'menu_position'       => 21,
 				'has_archive'         => false,
 				'rewrite'             => array( 'slug' => 'stat', 'with_front' => false ),
 				'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'revisions' ),
