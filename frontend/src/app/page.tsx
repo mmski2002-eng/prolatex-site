@@ -96,7 +96,7 @@ export default async function HomePage() {
                 </div>
                 <div className="stat">
                   <span className="num">15–20 лет</span>
-                  <span>гарантированный срок службы</span>
+                  <span>срок службы</span>
                 </div>
                 <div className="stat">
                   <span className="num">11 моделей</span>
