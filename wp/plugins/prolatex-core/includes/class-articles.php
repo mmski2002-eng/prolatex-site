@@ -33,6 +33,45 @@ class Articles {
 		add_action( 'init', array( $this, 'register' ) );
 		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
 		add_action( 'rest_api_init', array( $this, 'register_meta' ) );
+		// Мгновенная ревалидация фронта при изменении статьи.
+		add_action( 'save_post_' . self::CPT, array( $this, 'on_change' ), 10, 2 );
+		add_action( 'trashed_post', array( $this, 'on_delete' ) );
+		add_action( 'deleted_post', array( $this, 'on_delete' ) );
+	}
+
+	private function revalidate_secret() {
+		if ( defined( 'PROLATEX_REVALIDATE_SECRET' ) ) {
+			return PROLATEX_REVALIDATE_SECRET;
+		}
+		// Общий секрет с фронтом (PARTNER_SECRET в окружении Next).
+		return 'fd46a0cb182ab9d9b64ea928ad846adc2bd98a40b3a7c500';
+	}
+
+	private function revalidate( $slug ) {
+		$url = defined( 'PROLATEX_NEXT_URL' ) ? PROLATEX_NEXT_URL : 'http://127.0.0.1:3050';
+		wp_remote_post(
+			$url . '/api/revalidate',
+			array(
+				'timeout'  => 4,
+				'blocking' => false,
+				'headers'  => array( 'Content-Type' => 'application/json' ),
+				'body'     => wp_json_encode( array( 'secret' => $this->revalidate_secret(), 'slug' => $slug ) ),
+			)
+		);
+	}
+
+	public function on_change( $post_id, $post ) {
+		if ( wp_is_post_revision( $post_id ) || ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) ) {
+			return;
+		}
+		$this->revalidate( urldecode( $post->post_name ) );
+	}
+
+	public function on_delete( $post_id ) {
+		$post = get_post( $post_id );
+		if ( $post && self::CPT === $post->post_type ) {
+			$this->revalidate( urldecode( $post->post_name ) );
+		}
 	}
 
 	public function register() {

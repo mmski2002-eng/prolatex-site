@@ -6,7 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { articleCover } from "@/lib/covers";
 import { getBlogArticles } from "@/lib/blog";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Блог о натуральном латексе: гайды и статьи",
