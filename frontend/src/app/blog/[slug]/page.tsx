@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ARTICLES, getArticleBySlug } from "@/data/articles";
 import {articleJsonLd, ogMeta } from "@/lib/seo";
 import { renderInline, headingId } from "@/lib/inline";
+import { formatDateRu } from "@/lib/format";
 import { articleCover } from "@/lib/covers";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -64,7 +65,12 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <section style={{ paddingTop: 8, paddingBottom: 0 }}>
         <div className="wrap article-hero">
           <div>
-            <span className="tag sand">{article.tag}</span>
+            <div className="article-meta">
+              <span className="tag sand">{article.tag}</span>
+              <time className="article-date" dateTime={article.dateISO}>
+                {formatDateRu(article.dateISO)}
+              </time>
+            </div>
             <h1 className="page-h1 mt-16">{article.title}</h1>
             <p className="lead">{renderInline(article.leadRich ?? article.excerpt)}</p>
           </div>

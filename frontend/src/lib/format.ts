@@ -36,6 +36,18 @@ export function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+const MONTHS_RU = [
+  "января", "февраля", "марта", "апреля", "мая", "июня",
+  "июля", "августа", "сентября", "октября", "ноября", "декабря",
+];
+
+/** ISO «2026-08-25» → «25 августа 2026». */
+export function formatDateRu(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d) return iso;
+  return `${d} ${MONTHS_RU[m - 1]} ${y}`;
+}
+
 /** Маска ввода российского номера: любой ввод → «+7 (999) 123-45-67». */
 export function formatRuPhoneInput(raw: string): string {
   let digits = raw.replace(/\D/g, "");
