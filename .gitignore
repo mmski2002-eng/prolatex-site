@@ -1,0 +1,19 @@
+# deps / build
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/tsconfig.tsbuildinfo
+frontend/.env*
+frontend/leads-fallback.json
+
+# WordPress core (installed via wp-env)
+wp/wordpress/
+
+# raw video masters (>100MB, not needed — web versions in frontend/public/video)
+source-assets/video/
+media-web/
+
+# os / editor
+.DS_Store
+**/.DS_Store
+Thumbs.db

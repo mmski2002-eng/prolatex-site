@@ -1,0 +1,348 @@
+{
+  "intro": "Латексные подушки Про-Латекс производятся по технологии Dunlop: латекс вулканизируется паром при температуре до 100 °C. Два состава — Classic (сбалансированная смесь натурального и синтетического латекса) и Natural (100% натуральный латекс).",
+  "blends": [
+    {
+      "slug": "classic",
+      "name": "Dunlop Classic",
+      "description": "Сбалансированная смесь натурального и синтетического латекса — упругость и доступность."
+    },
+    {
+      "slug": "natural",
+      "name": "Dunlop Natural",
+      "description": "100% натуральный латекс — максимум природной эластичности и гипоаллергенности."
+    }
+  ],
+  "firmness_options": [
+    "мягкая",
+    "полумягкая",
+    "средняя"
+  ],
+  "types": [
+    {
+      "slug": "soap",
+      "name": "Классические (Soap)",
+      "description": "Подушки классической «мыльной» формы с упругой отзывчивой поддержкой. Подходят для сна на спине, боку и животе."
+    },
+    {
+      "slug": "ergo",
+      "name": "Эргономические (Ergo)",
+      "description": "Анатомическая форма с валиками разной высоты выравнивает шейный отдел позвоночника и снимает напряжение мышц шеи."
+    },
+    {
+      "slug": "ergo-premium",
+      "name": "Ergo Premium",
+      "description": "Премиальная эргономическая серия с усложнённой геометрией поверхности для максимальной поддержки шеи."
+    }
+  ],
+  "models": [
+    {
+      "model": "K108",
+      "type": "soap",
+      "length_mm": 550,
+      "width_mm": 550,
+      "height_mm": 150
+    },
+    {
+      "model": "K202",
+      "type": "soap",
+      "length_mm": 600,
+      "width_mm": 400,
+      "height_mm": 125
+    },
+    {
+      "model": "K201",
+      "type": "soap",
+      "length_mm": 600,
+      "width_mm": 400,
+      "height_mm": 140
+    },
+    {
+      "model": "K902",
+      "type": "soap",
+      "length_mm": 600,
+      "width_mm": 400,
+      "height_mm": 140
+    },
+    {
+      "model": "K006",
+      "type": "soap",
+      "length_mm": 610,
+      "width_mm": 400,
+      "height_mm": 152
+    },
+    {
+      "model": "K167",
+      "type": "soap",
+      "length_mm": 640,
+      "width_mm": 420,
+      "height_mm": 155
+    },
+    {
+      "model": "K206",
+      "type": "soap",
+      "length_mm": 650,
+      "width_mm": 400,
+      "height_mm": 145
+    },
+    {
+      "model": "K231",
+      "type": "soap",
+      "length_mm": 670,
+      "width_mm": 470,
+      "height_mm": 148
+    },
+    {
+      "model": "K216",
+      "type": "soap",
+      "length_mm": 670,
+      "width_mm": 570,
+      "height_mm": 145
+    },
+    {
+      "model": "K253",
+      "type": "soap",
+      "length_mm": 700,
+      "width_mm": 400,
+      "height_mm": 145
+    },
+    {
+      "model": "K169",
+      "type": "soap",
+      "length_mm": 710,
+      "width_mm": 400,
+      "height_mm": 180
+    },
+    {
+      "model": "K212",
+      "type": "soap",
+      "length_mm": 720,
+      "width_mm": 425,
+      "height_mm": 142
+    },
+    {
+      "model": "K959",
+      "type": "soap",
+      "length_mm": 750,
+      "width_mm": 400,
+      "height_mm": 145,
+      "retail_name": "BreezePillow"
+    },
+    {
+      "model": "K269",
+      "type": "soap",
+      "length_mm": 750,
+      "width_mm": 450,
+      "height_mm": 120
+    },
+    {
+      "model": "K235",
+      "type": "soap",
+      "length_mm": 750,
+      "width_mm": 450,
+      "height_mm": 142,
+      "retail_name": "EasyPillow"
+    },
+    {
+      "model": "K203",
+      "type": "soap",
+      "length_mm": 770,
+      "width_mm": 380,
+      "height_mm": 145
+    },
+    {
+      "model": "K860",
+      "type": "soap",
+      "length_mm": 800,
+      "width_mm": 400,
+      "height_mm": 145
+    },
+    {
+      "model": "K251",
+      "type": "soap",
+      "length_mm": 900,
+      "width_mm": 400,
+      "height_mm": 140
+    },
+    {
+      "model": "K252",
+      "type": "soap",
+      "length_mm": 1350,
+      "width_mm": 400,
+      "height_mm": 140,
+      "note": "Удлинённая — для двоих или сна в обнимку"
+    },
+    {
+      "model": "K268",
+      "type": "soap",
+      "length_mm": 1500,
+      "width_mm": 400,
+      "height_mm": 145,
+      "note": "Максимальная длина в коллекции"
+    },
+    {
+      "model": "K072",
+      "type": "soap",
+      "length_mm": 700,
+      "width_mm": 400,
+      "height_mm": 125
+    },
+    {
+      "model": "K962",
+      "type": "soap",
+      "length_mm": 700,
+      "width_mm": 400,
+      "height_mm": 145
+    },
+    {
+      "model": "K309",
+      "type": "ergo",
+      "length_mm": 500,
+      "width_mm": 435,
+      "height_mm": 115
+    },
+    {
+      "model": "K558",
+      "type": "ergo",
+      "length_mm": 600,
+      "width_mm": 400,
+      "height_mm": 140,
+      "retail_name": "BreathSoft"
+    },
+    {
+      "model": "K313",
+      "type": "ergo",
+      "length_mm": 675,
+      "width_mm": 435,
+      "height_mm": 115,
+      "retail_name": "SleepSoft"
+    },
+    {
+      "model": "K415",
+      "type": "ergo",
+      "length_mm": 675,
+      "width_mm": 435,
+      "height_mm": 115
+    },
+    {
+      "model": "K333",
+      "type": "ergo",
+      "length_mm": 665,
+      "width_mm": 340,
+      "height_mm": 95
+    },
+    {
+      "model": "K484",
+      "type": "ergo",
+      "length_mm": 680,
+      "width_mm": 340,
+      "height_mm": 95
+    },
+    {
+      "model": "K609",
+      "type": "ergo-premium",
+      "length_mm": 600,
+      "width_mm": 390,
+      "height_mm": 90
+    },
+    {
+      "model": "K679",
+      "type": "ergo-premium",
+      "length_mm": 600,
+      "width_mm": 400,
+      "height_mm": 90,
+      "retail_name": "PillowEase"
+    }
+  ],
+  "retail_line": {
+    "title": "Латексные подушки Про-Латекс",
+    "description": "Пять готовых моделей с собственными именами на базе форм Novaya: классические Soap и анатомические Ergo. Все подушки — латекс Dunlop, упаковка полиэтилен. Скоро линейка расширится до семи моделей.",
+    "packaging": "Полиэтилен",
+    "models": [
+      {
+        "name": "EasyPillow",
+        "base_model": "K235",
+        "type": "soap",
+        "length_mm": 750,
+        "width_mm": 450,
+        "height_mm": 142,
+        "size_label": "75×45×14,2 см",
+        "packaging": "Полиэтилен",
+        "image": "/img/pillows/k235-easypillow.webp",
+        "image_latex": "/img/pillows/k235-easypillow-latex.webp",
+        "image_cutaway": "/img/pillows/k235-easypillow-cutaway.webp",
+        "subtitle": "Классическая подушка",
+        "description": "Универсальная подушка классической «мыльной» формы. Упруго поддерживает голову в любой позе сна — на спине, боку и животе. Перфорированный латекс Dunlop дышит всю ночь и не накапливает тепло.",
+        "material": "100% латекс, технология Dunlop",
+        "firmness_options": "Soft / Semi-Soft / Medium"
+      },
+      {
+        "name": "SleepSoft",
+        "base_model": "K313",
+        "type": "ergo",
+        "length_mm": 675,
+        "width_mm": 435,
+        "height_mm": 115,
+        "size_label": "67,5×43,5 см",
+        "packaging": "Полиэтилен",
+        "image": "/img/pillows/k313-sleepsoft.webp",
+        "image_latex": "/img/pillows/k313-sleepsoft-latex.webp",
+        "image_cutaway": "/img/pillows/k313-sleepsoft-cutaway.webp",
+        "subtitle": "Анатомическая подушка",
+        "description": "Анатомическая форма с двумя валиками разной высоты выравнивает шейный отдел позвоночника и снимает напряжение в шее и плечах. Рекомендуется тем, кто спит на боку и на спине.",
+        "material": "100% латекс, технология Dunlop",
+        "firmness_options": "Soft / Semi-Soft / Medium"
+      },
+      {
+        "name": "PillowEase",
+        "base_model": "K679",
+        "type": "ergo-premium",
+        "length_mm": 600,
+        "width_mm": 400,
+        "height_mm": 90,
+        "size_label": "60×40 см",
+        "packaging": "Полиэтилен",
+        "image": "/img/pillows/k679-pillowease.webp",
+        "image_latex": "/img/pillows/k679-pillowease-latex.webp",
+        "image_cutaway": "/img/pillows/k679-pillowease-cutaway.webp",
+        "subtitle": "Низкая анатомическая подушка",
+        "description": "Низкопрофильная анатомическая подушка высотой 9 см — для тех, кто любит спать ниже, и для сна на животе. Валики мягко поддерживают шею без излишнего подъёма головы.",
+        "material": "100% латекс, технология Dunlop",
+        "firmness_options": "Soft / Semi-Soft / Medium"
+      },
+      {
+        "name": "BreathSoft",
+        "base_model": "K558",
+        "type": "ergo",
+        "length_mm": 600,
+        "width_mm": 400,
+        "height_mm": 140,
+        "size_label": "60×40 см",
+        "packaging": "Полиэтилен",
+        "image": "/img/pillows/k558-breathsoft.webp",
+        "image_latex": "/img/pillows/k558-breathsoft-latex.webp",
+        "image_cutaway": "/img/pillows/k558-breathsoft-cutaway.webp",
+        "subtitle": "Анатомическая подушка",
+        "description": "Анатомическая подушка с поддерживающими валиками — бережное выравнивание шеи при сне на боку и спине. Латекс Dunlop мгновенно откликается на движение и не проседает годами.",
+        "material": "100% латекс, технология Dunlop",
+        "firmness_options": "Soft / Semi-Soft / Medium"
+      },
+      {
+        "name": "BreezePillow",
+        "base_model": "K959",
+        "type": "soap",
+        "length_mm": 750,
+        "width_mm": 400,
+        "height_mm": 145,
+        "size_label": "75×40×14,5 см",
+        "packaging": "Полиэтилен",
+        "image": "/img/pillows/k959-breezepillow.webp",
+        "image_latex": "/img/pillows/k959-breezepillow-latex.webp",
+        "image_cutaway": "/img/pillows/k959-breezepillow-cutaway.webp",
+        "subtitle": "Классическая удлинённая подушка",
+        "description": "Классическая форма в удлинённом формате 75 см — комфортно поворачиваться, не «съезжая» с подушки. Открытая ячеистая структура латекса вентилируется при каждом движении.",
+        "material": "100% латекс, технология Dunlop",
+        "firmness_options": "Soft / Semi-Soft / Medium"
+      }
+    ]
+  }
+}
