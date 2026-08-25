@@ -1,4 +1,5 @@
 import { resolveVideo } from "@/lib/media";
+import VideoPlayer from "./VideoPlayer";
 
 export default function VideoBlock({
   filename,
@@ -22,19 +23,12 @@ export default function VideoBlock({
   return (
     <div className="video-block">
       {videoSrc ? (
-        <video
-          data-autoplay={autoplay ? "true" : undefined}
-          poster={posterSrc ?? undefined}
-          controls={!autoplay}
-          autoPlay={autoplay}
-          muted={autoplay}
-          loop={autoplay}
-          playsInline
-          preload="none"
-          aria-label={title}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        <VideoPlayer
+          videoSrc={videoSrc}
+          posterSrc={posterSrc ?? undefined}
+          title={title}
+          autoplay={autoplay}
+        />
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={posterSrc ?? undefined} alt={title} loading="lazy" />

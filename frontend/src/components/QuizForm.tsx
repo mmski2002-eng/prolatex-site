@@ -96,7 +96,7 @@ export default function QuizForm({ models }: { models: MattressModel[] }) {
     return (
       <div className="quiz-box">
         <div className="quiz-body">
-          <div className="quiz-q">Ваши рекомендации</div>
+          <div className="quiz-q">Наши рекомендации</div>
           {recommendations.map(({ model, reason }) => (
             <div className="quiz-result-card" key={model.slug}>
               <h4>
@@ -139,26 +139,28 @@ export default function QuizForm({ models }: { models: MattressModel[] }) {
         <div className="visually-hidden" aria-live="polite">
           Вопрос {stepIndex + 1} из {STEPS.length}
         </div>
-        <div className="quiz-q">
-          {stepIndex + 1}. {question.q}
-        </div>
-        <div className="quiz-opts" role="group" aria-label={question.q}>
-          {question.opts.map((opt) => (
-            <button
-              key={opt.value}
-              type="button"
-              className="quiz-opt"
-              onClick={() => selectOption(opt.value)}
-            >
-              {opt.label}
+        <div className="quiz-step" key={currentStep}>
+          <div className="quiz-q">
+            {stepIndex + 1}. {question.q}
+          </div>
+          <div className="quiz-opts" role="group" aria-label={question.q}>
+            {question.opts.map((opt) => (
+              <button
+                key={opt.value}
+                type="button"
+                className="quiz-opt"
+                onClick={() => selectOption(opt.value)}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+          {stepIndex > 0 && (
+            <button type="button" className="quiz-back" onClick={goBack}>
+              ← Назад
             </button>
-          ))}
+          )}
         </div>
-        {stepIndex > 0 && (
-          <button type="button" className="quiz-back" onClick={goBack}>
-            ← Назад
-          </button>
-        )}
       </div>
     </div>
   );

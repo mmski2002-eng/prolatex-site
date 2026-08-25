@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { MattressModel } from "@/lib/types";
 import { firmnessLabel } from "@/lib/format";
 
@@ -13,13 +14,11 @@ export default function ModelCard({ model }: { model: MattressModel }) {
     <Link href={`/matrasy/${model.slug}/`} className="model-card">
       <div className="model-card-media">
         {model.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={model.image}
             alt={`Матрас ${model.name} — латексный блок`}
-            width={900}
-            height={800}
-            loading="lazy"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
           />
         ) : (
           <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">

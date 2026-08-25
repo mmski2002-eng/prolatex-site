@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ARTICLES } from "@/data/articles";
 import {ogMeta } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -32,8 +33,7 @@ export default function BlogPage() {
             {ARTICLES.map((a) => (
               <Link className="blog-card" href={`/blog/${a.slug}/`} key={a.slug}>
                 <span className="blog-card-media">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={articleCover(a.slug)} alt="" width={900} height={700} loading="lazy" />
+                  <Image src={articleCover(a.slug)} alt="" fill sizes="(max-width: 640px) 100vw, 380px" />
                 </span>
                 <span className="blog-card-body">
                   <span className="blog-tag">{a.tag}</span>

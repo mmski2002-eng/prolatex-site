@@ -38,11 +38,19 @@ export default function KontaktyPage() {
               <div className="spec-row"><span>ОГРНИП</span><b>324508100606552 от 25.10.2024</b></div>
             </div>
             <div
-              className="cell mt-24"
-              style={{ border: "1px solid var(--line)", height: 220, display: "flex", alignItems: "center", justifyContent: "center" }}
-              aria-label="Карта расположения (заглушка)"
+              className="mt-24"
+              style={{ border: "1px solid var(--line)", borderRadius: "var(--radius)", overflow: "hidden", height: 320 }}
             >
-              <p style={{ color: "var(--gray-soft)" }}>Карта — уточняется</p>
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=30.476259,59.972016&z=17&pt=30.476259,59.972016,pm2rdm"
+                width="100%"
+                height="320"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0, display: "block" }}
+                title="Карта: склад Про-Латекс, Санкт-Петербург, ул. Электропультовцев, 7"
+              />
             </div>
           </div>
           <LeadForm source="kontakty-page" title="Написать нам" subtitle="Ответим на вопросы о моделях, размерах и сроках изготовления." />

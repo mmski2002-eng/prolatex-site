@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ARTICLES, getArticleBySlug } from "@/data/articles";
 import {articleJsonLd, ogMeta } from "@/lib/seo";
 import { renderInline, headingId } from "@/lib/inline";
@@ -68,8 +69,15 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <p className="lead">{renderInline(article.leadRich ?? article.excerpt)}</p>
           </div>
           <div className="article-hero-media" aria-hidden="true">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={articleCover(slug)} alt="" width={900} height={700} fetchPriority="high" />
+            <Image
+              src={articleCover(slug)}
+              alt=""
+              width={900}
+              height={700}
+              sizes="(max-width: 900px) 100vw, 380px"
+              priority
+              style={{ width: "100%", height: "auto" }}
+            />
           </div>
         </div>
       </section>
@@ -115,8 +123,14 @@ export default async function BlogArticlePage({ params }: PageProps) {
               if (block.type === "img")
                 return (
                   <figure className="article-img" key={i}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={block.src} alt={block.alt} width={1200} height={675} loading="lazy" />
+                    <Image
+                      src={block.src}
+                      alt={block.alt}
+                      width={1200}
+                      height={675}
+                      sizes="(max-width: 760px) 100vw, 760px"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </figure>
                 );
               if (block.type === "table")
@@ -157,8 +171,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             {others.map((a) => (
               <Link className="blog-card" href={`/blog/${a.slug}/`} key={a.slug}>
                 <span className="blog-card-media">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={articleCover(a.slug)} alt="" width={900} height={700} loading="lazy" />
+                  <Image src={articleCover(a.slug)} alt="" fill sizes="(max-width: 640px) 100vw, 380px" />
                 </span>
                 <span className="blog-card-body">
                   <span className="blog-tag">{a.tag}</span>

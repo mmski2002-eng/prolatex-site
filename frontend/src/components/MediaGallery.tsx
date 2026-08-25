@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export interface GalleryItem {
   type: "image" | "video";
@@ -64,8 +65,14 @@ export default function MediaGallery({
 
   const media = (inZoom: boolean) =>
     current.type === "image" ? (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img src={current.src} alt={current.alt} width={900} height={800} />
+      <Image
+        src={current.src}
+        alt={current.alt}
+        width={900}
+        height={800}
+        sizes={inZoom ? "(max-width: 1100px) 94vw, 1100px" : "(max-width: 900px) 100vw, 560px"}
+        priority={inZoom}
+      />
     ) : (
       <video
         key={`${current.src}${inZoom ? "-zoom" : ""}`}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   getAllMattresses,
   getContentData,
@@ -171,8 +172,7 @@ export default async function HomePage() {
             ].map((c) => (
               <Link className="cat-card" href={c.href} key={c.href}>
                 <span className="cat-card-media">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={c.img} alt={c.title} width={900} height={800} loading="lazy" />
+                  <Image src={c.img} alt={c.title} fill sizes="(max-width: 640px) 100vw, 380px" />
                 </span>
                 <span className="cat-card-body">
                   <span className="cat-label">{c.label}</span>
@@ -219,13 +219,13 @@ export default async function HomePage() {
           {flagshipLayers && (
             <div className="layers-grid anatomy-grid">
               <div className="anatomy-photo">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/img/mattress/latex-block-dual.webp"
                   alt="Латексный блок матраса Eco Latex крупным планом"
                   width={900}
                   height={800}
-                  loading="lazy"
+                  sizes="(max-width: 900px) 100vw, 600px"
+                  style={{ width: "100%", height: "auto" }}
                 />
                 <p className="anatomy-caption">
                   Перфорированный латексный блок — основа комфортных слоёв
@@ -372,7 +372,7 @@ export default async function HomePage() {
               <Link className="blog-card" href={`/blog/${a.slug}/`} key={a.slug}>
                 <span className="blog-card-media">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={articleCover(a.slug)} alt="" width={900} height={700} loading="lazy" />
+                  <Image src={articleCover(a.slug)} alt="" fill sizes="(max-width: 640px) 100vw, 380px" />
                 </span>
                 <span className="blog-card-body">
                   <h3>{a.title}</h3>

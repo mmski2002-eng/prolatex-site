@@ -2,7 +2,7 @@
 
 import { useId, useState, type FormEvent } from "react";
 import Link from "next/link";
-import { isValidEmail, isValidRuPhone } from "@/lib/format";
+import { isValidEmail, isValidRuPhone, formatRuPhoneInput } from "@/lib/format";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -28,6 +28,9 @@ export default function LeadForm({
 }) {
   const formId = useId();
   const [status, setStatus] = useState<Status>("idle");
+  const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string }>({});
   const [errorMessage, setErrorMessage] = useState<string>("");
 
@@ -47,7 +50,8 @@ export default function LeadForm({
     if (email && !isValidEmail(email)) nextErrors.email = "Введите корректный e-mail";
 
     setErrors(nextErrors);
-    if (Object.keys(nextErrors).length > 0) return;
+    setConsentError(!consent);
+    if (Object.keys(nextErrors).length > 0 || !consent) return;
 
     setStatus("loading");
     try {
@@ -79,6 +83,8 @@ export default function LeadForm({
       }
       setStatus("success");
       form.reset();
+      setPhone("");
+      setConsent(false);
     } catch {
       setStatus("error");
       setErrorMessage("Не удалось отправить заявку. Позвоните нам по телефону или попробуйте ещё раз.");
@@ -138,6 +144,10 @@ export default function LeadForm({
           inputMode="tel"
           autoComplete="tel"
           placeholder="+7 (___) ___-__-__"
+          value={phone}
+          maxLength={18}
+          onFocus={() => phone === "" && setPhone("+7 ")}
+          onChange={(e) => setPhone(formatRuPhoneInput(e.target.value))}
           aria-invalid={Boolean(errors.phone)}
         />
         {errors.phone && <div className="err-msg">{errors.phone}</div>}
@@ -168,13 +178,30 @@ export default function LeadForm({
         <label htmlFor={`${formId}-website`}>Website</label>
         <input id={`${formId}-website`} name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
-      <button type="submit" className="btn btn-primary btn-block" disabled={status === "loading"}>
+      <div className={`consent${consentError ? " error" : ""}`}>
+        <input
+          id={`${formId}-consent`}
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => {
+            setConsent(e.target.checked);
+            if (e.target.checked) setConsentError(false);
+          }}
+          aria-invalid={consentError}
+        />
+        <label htmlFor={`${formId}-consent`}>
+          Я даю согласие на обработку персональных данных и ознакомлен с{" "}
+          <Link href="/politika-konfidencialnosti/">политикой конфиденциальности</Link>.
+        </label>
+      </div>
+      {consentError && <div className="err-msg">Подтвердите согласие на обработку персональных данных</div>}
+      <button
+        type="submit"
+        className="btn btn-primary btn-block"
+        disabled={status === "loading" || !consent}
+      >
         {status === "loading" ? "Отправляем…" : "Отправить заявку"}
       </button>
-      <p className="form-note">
-        Нажимая кнопку, вы соглашаетесь с{" "}
-        <Link href="/politika-konfidencialnosti/">политикой обработки персональных данных</Link>.
-      </p>
     </form>
   );
 }

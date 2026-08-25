@@ -17,3 +17,7 @@ media-web/
 .DS_Store
 **/.DS_Store
 Thumbs.db
+
+# OMC tooling state
+.omc/
+**/.omc/

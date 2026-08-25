@@ -59,7 +59,7 @@ export default async function PodushkiPage() {
                           ? [{ type: "image" as const, src: m.image_latex, alt: `Подушка ${m.name} без чехла`, label: "Латекс" }]
                           : []),
                         ...(m.image_cutaway
-                          ? [{ type: "image" as const, src: m.image_cutaway, alt: `Подушка ${m.name} в разрезе`, label: "В разрезе" }]
+                          ? [{ type: "image" as const, src: m.image_cutaway, alt: `Подушка ${m.name} — латексный наполнитель под снятым чехлом`, label: "Наполнитель" }]
                           : []),
                         {
                           type: "video" as const,
