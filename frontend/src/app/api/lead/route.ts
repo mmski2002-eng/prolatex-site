@@ -142,6 +142,7 @@ export async function POST(request: NextRequest) {
           { title: "Фотографии товаров (ZIP)", href: `/api/partner/prolatex-foto-tovarov.zip?t=${t}` },
           { title: "Сертификат соответствия (PDF)", href: `/api/partner/sertifikat-sootvetstviya-lateks-2027.pdf?t=${t}` },
           { title: "Товарный фид YML", href: `/api/feed/yml/?t=${t}` },
+          { title: "Презентация компании (PDF)", href: `/api/partner/prolatex-prezentaciya.pdf?t=${t}` },
         ],
       },
     });

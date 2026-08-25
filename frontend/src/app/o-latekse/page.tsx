@@ -33,39 +33,6 @@ export default async function OLatekseePage() {
         </div>
       </section>
 
-      <section aria-label="Презентация компании">
-        <div className="wrap">
-          <div className="booklet-card">
-            <div className="booklet-cover" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="46" height="46" fill="none">
-                <rect x="9" y="6" width="26" height="34" rx="3" stroke="currentColor" strokeWidth="2" />
-                <path d="M15 15h14M15 21h14M15 27h9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                <path d="M31 33.5V42l4-3 4 3v-8.5" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="var(--sand-tint)" />
-              </svg>
-            </div>
-            <div className="booklet-body">
-              <div className="section-tag">Презентация</div>
-              <h2>Буклет ProLatex — мягкий домашний стиль</h2>
-              <p>
-                Коротко о компании, преимуществах натурального латекса и уходе
-                за матрасом — в одном PDF. Удобно сохранить или переслать.
-              </p>
-              <a
-                href="/docs/prolatex-prezentaciya.pdf"
-                download
-                className="btn booklet-btn"
-              >
-                <svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true">
-                  <path d="M10 3v9m0 0 3.5-3.5M10 12 6.5 8.5M4 15h12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                Скачать презентацию · PDF
-              </a>
-              <span className="booklet-meta">PDF · 5 страниц · 0,45 МБ</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="tint" aria-label="10 причин">
         <div className="wrap">
           <div className="section-head">

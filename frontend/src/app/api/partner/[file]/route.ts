@@ -18,6 +18,10 @@ const FILES: Record<string, { disk: string; type: string }> = {
     disk: "sertifikat-sootvetstviya-lateks-2027.pdf",
     type: "application/pdf",
   },
+  "prolatex-prezentaciya.pdf": {
+    disk: "prolatex-prezentaciya.pdf",
+    type: "application/pdf",
+  },
 };
 
 export async function GET(
