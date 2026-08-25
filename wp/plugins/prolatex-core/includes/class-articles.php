@@ -37,6 +37,36 @@ class Articles {
 		add_action( 'save_post_' . self::CPT, array( $this, 'on_change' ), 10, 2 );
 		add_action( 'trashed_post', array( $this, 'on_delete' ) );
 		add_action( 'deleted_post', array( $this, 'on_delete' ) );
+		// Латинские ЧПУ: кириллический slug -> транслит.
+		add_filter( 'wp_insert_post_data', array( $this, 'translit_slug' ), 10, 2 );
+	}
+
+	private static function transliterate( $text ) {
+		$map = array(
+			'а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d','е'=>'e','ё'=>'e','ж'=>'zh',
+			'з'=>'z','и'=>'i','й'=>'y','к'=>'k','л'=>'l','м'=>'m','н'=>'n','о'=>'o',
+			'п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u','ф'=>'f','х'=>'h','ц'=>'ts',
+			'ч'=>'ch','ш'=>'sh','щ'=>'sch','ъ'=>'','ы'=>'y','ь'=>'','э'=>'e','ю'=>'yu','я'=>'ya',
+		);
+		$lower = function_exists( 'mb_strtolower' ) ? mb_strtolower( $text, 'UTF-8' ) : strtolower( $text );
+		return strtr( $lower, $map );
+	}
+
+	/**
+	 * Для статей: если slug пуст или содержит кириллицу — генерируем
+	 * латинский slug из заголовка (транслит). Явный латинский slug не трогаем.
+	 */
+	public function translit_slug( $data, $postarr ) {
+		if ( ! isset( $data['post_type'] ) || self::CPT !== $data['post_type'] ) {
+			return $data;
+		}
+		$name  = isset( $data['post_name'] ) ? $data['post_name'] : '';
+		$cyr   = preg_match( '/%[0-9a-f]{2}/i', $name ) || preg_match( '/[а-яё]/iu', rawurldecode( $name ) );
+		if ( '' === $name || $cyr ) {
+			$source = ! empty( $data['post_title'] ) ? $data['post_title'] : rawurldecode( $name );
+			$data['post_name'] = sanitize_title( self::transliterate( $source ) );
+		}
+		return $data;
 	}
 
 	private function revalidate_secret() {
