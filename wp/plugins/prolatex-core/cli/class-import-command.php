@@ -384,7 +384,7 @@ class Import_Command {
 			$full = $full_articles[ $slug ];
 
 			$post_id = $this->upsert_post(
-				'post',
+				\Prolatex\Articles::CPT,
 				$slug,
 				array(
 					'post_title'   => $full['title'],
@@ -396,6 +396,15 @@ class Import_Command {
 			);
 
 			if ( $post_id && ! $dry_run ) {
+				// Лид и тег заполняем только у новых статей: у существующих
+				// это ручная работа редактора, её перезапись недопустима.
+				$lead = get_post_meta( $post_id, \Prolatex\Articles::META_LEAD, true );
+				if ( '' === $lead ) {
+					update_post_meta( $post_id, \Prolatex\Articles::META_LEAD, $full['excerpt'] );
+				}
+				if ( ! empty( $full['tag'] ) && ! has_term( '', \Prolatex\Articles::TAX, $post_id ) ) {
+					wp_set_object_terms( $post_id, $full['tag'], \Prolatex\Articles::TAX );
+				}
 				\WP_CLI::log( "Статья: {$full['title']} ({$slug}) -> ID {$post_id}" );
 			}
 
