@@ -9,7 +9,7 @@ import MatrasyCatalog from "@/components/MatrasyCatalog";
 export const metadata: Metadata = {
   title: { absolute: "Латексные матрасы — купить матрас из латекса, цены" },
   description:
-    "Каталог латексных матрасов Про-Латекс: пружинные, беспружинные и с топпером. 100% натуральный бельгийский латекс, гарантия 15–20 лет, размеры 80–200 см.",
+    "Каталог латексных матрасов Про-Латекс: пружинные и беспружинные. 100% натуральный бельгийский латекс, гарантия 15–20 лет, размеры 80–200 см.",
   alternates: { canonical: "/matrasy/" },
   openGraph: ogMeta({ url: "/matrasy/" }),
 };
@@ -58,9 +58,8 @@ export default async function MatrasyPage() {
                 квиз-подбор
               </Link>{" "}
               или изучите категории: {" "}
-              <Link href="/matrasy/pruzhinnye/">пружинные</Link>,{" "}
-              <Link href="/matrasy/bespruzhinnye/">беспружинные</Link> и{" "}
-              <Link href="/matrasy/s-topperom/">с топпером</Link>.
+              <Link href="/matrasy/pruzhinnye/">пружинные</Link> и{" "}
+              <Link href="/matrasy/bespruzhinnye/">беспружинные</Link>.
             </p>
           </div>
         </div>

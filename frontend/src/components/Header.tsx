@@ -8,7 +8,6 @@ const MATRASY_LINKS = [
   { href: "/matrasy/", label: "Все матрасы" },
   { href: "/matrasy/pruzhinnye/", label: "Пружинные" },
   { href: "/matrasy/bespruzhinnye/", label: "Беспружинные" },
-  { href: "/matrasy/s-topperom/", label: "С топпером" },
 ];
 
 const NAV = [

@@ -59,9 +59,6 @@ function reasonFor(model: MattressModel, answers: QuizAnswers): string {
   } else if (answers.pose === "mixed" && model.dual_sided) {
     bits.push("двусторонняя жёсткость подстроится под смену позы за ночь");
   }
-  if (model.category === "s-topperom") {
-    bits.push("интегрированный топпер добавляет мягкий верхний слой");
-  }
   if (model.category === "bespruzhinnye") {
     bits.push("монолитный латекс без пружин — точечная поддержка каждого сантиметра тела");
   }

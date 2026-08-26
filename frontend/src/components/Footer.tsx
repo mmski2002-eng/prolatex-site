@@ -21,7 +21,6 @@ export default function Footer() {
               <li><Link href="/matrasy/">Все матрасы</Link></li>
               <li><Link href="/matrasy/pruzhinnye/">Пружинные матрасы</Link></li>
               <li><Link href="/matrasy/bespruzhinnye/">Беспружинные матрасы</Link></li>
-              <li><Link href="/matrasy/s-topperom/">С топпером</Link></li>
               <li><Link href="/podushki/">Латексные подушки</Link></li>
               <li><Link href="/toppery/">Латексные топперы</Link></li>
             </ul>

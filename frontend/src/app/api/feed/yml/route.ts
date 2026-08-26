@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
         { name: "Жёсткость", value: m.firmness },
         { name: "Латекс суммарно", value: String(m.latex_total_cm), unit: "см" },
         { name: "Максимальная нагрузка на спальное место", value: "150", unit: "кг" },
-        { name: "Тип", value: m.category === "bespruzhinnye" ? "Беспружинный" : m.category === "s-topperom" ? "Пружинный с топпером" : "Пружинный" },
+        { name: "Тип", value: m.category === "bespruzhinnye" ? "Беспружинный" : "Пружинный" },
       ],
     });
   }

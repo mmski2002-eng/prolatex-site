@@ -6,7 +6,6 @@ import { firmnessLabel } from "@/lib/format";
 const CATEGORY_LABEL: Record<string, string> = {
   pruzhinnye: "Пружинный",
   bespruzhinnye: "Беспружинный",
-  "s-topperom": "С топпером",
 };
 
 export default function ModelCard({ model }: { model: MattressModel }) {

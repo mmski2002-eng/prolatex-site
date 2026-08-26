@@ -149,13 +149,6 @@ export default async function HomePage() {
                 img: "/img/mattress/latex-block-dia.webp",
               },
               {
-                href: "/matrasy/s-topperom/",
-                label: "Матрасы",
-                title: "С топпером",
-                text: "Пружинные модели с комфортным топпером 4–5 см — «отельная» мягкость.",
-                img: "/img/mattress/latex-block-ixal.webp",
-              },
-              {
                 href: "/podushki/",
                 label: "Подушки",
                 title: "Латексные подушки",
