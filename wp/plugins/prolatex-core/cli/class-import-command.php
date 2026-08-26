@@ -24,14 +24,20 @@ class Import_Command {
 	 * [--dry-run]
 	 * : Показать, что будет сделано, без записи в базу.
 	 *
+	 * [--force-content]
+	 * : Перезаписать тексты статей блога. По умолчанию контент существующих
+	 * : статей не трогается — в нём картинки и правки из админки.
+	 *
 	 * ## EXAMPLES
 	 *
 	 *     wp prolatex import
+	 *     wp prolatex import --force-content
 	 *
 	 * @when after_wp_load
 	 */
 	public function __invoke( $args, $assoc_args ) {
-		$dry_run = isset( $assoc_args['dry-run'] );
+		$dry_run       = isset( $assoc_args['dry-run'] );
+		$force_content = isset( $assoc_args['force-content'] );
 
 		if ( ! is_dir( PROLATEX_DATA_DIR ) ) {
 			\WP_CLI::error( "Директория с данными не найдена: " . PROLATEX_DATA_DIR . '. Проверьте mappings в .wp-env.json.' );
@@ -50,7 +56,7 @@ class Import_Command {
 		$stats['pillow']   = $this->import_pillows( $dry_run );
 		$stats['topper']   = $this->import_toppers( $dry_run );
 		$stats['review']   = $this->import_reviews( $dry_run );
-		$stats['post']     = $this->import_articles( $dry_run );
+		$stats['post']     = $this->import_articles( $dry_run, $force_content );
 
 		\WP_CLI::success(
 			sprintf(
@@ -365,7 +371,7 @@ class Import_Command {
 	/**
 	 * Статьи блога: обычные posts, полные тексты из Articles_Content.
 	 */
-	private function import_articles( $dry_run ) {
+	private function import_articles( $dry_run, $force_content = false ) {
 		$data = $this->read_json( 'content.json' );
 		if ( ! $data || empty( $data['articles'] ) ) {
 			return 0;
@@ -383,15 +389,23 @@ class Import_Command {
 
 			$full = $full_articles[ $slug ];
 
+			// Контент существующей статьи — редакторская работа: там картинки,
+			// вставленные в админке, которых нет в исходных текстах. Перезапись
+			// только по явному --force-content.
+			$existing = $this->find_existing( \Prolatex\Articles::CPT, $slug );
+			$postarr  = array(
+				'post_title'   => $full['title'],
+				'post_excerpt' => $full['excerpt'],
+				'post_status'  => 'publish',
+			);
+			if ( ! $existing || $force_content || '' === trim( (string) $existing->post_content ) ) {
+				$postarr['post_content'] = $full['content'];
+			}
+
 			$post_id = $this->upsert_post(
 				\Prolatex\Articles::CPT,
 				$slug,
-				array(
-					'post_title'   => $full['title'],
-					'post_content' => $full['content'],
-					'post_excerpt' => $full['excerpt'],
-					'post_status'  => 'publish',
-				),
+				$postarr,
 				$dry_run
 			);
 
