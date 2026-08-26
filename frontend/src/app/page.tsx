@@ -80,7 +80,7 @@ export default async function HomePage() {
               <p className="sub">
                 Сок дерева гевеи вместо синтетики. Анатомическая поддержка
                 позвоночника, гипоаллергенность и срок службы 15–20 лет.
-                11 моделей матрасов, латексные подушки и топперы под любой вес и
+                9 моделей матрасов, латексные подушки и топперы под любой вес и
                 позу сна.
               </p>
               <div className="hero-ctas">
@@ -99,7 +99,7 @@ export default async function HomePage() {
                   <span>срок службы</span>
                 </div>
                 <div className="stat">
-                  <span className="num">11 моделей</span>
+                  <span className="num">9 моделей</span>
                   <span>матрасов + подушки и топперы</span>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default async function HomePage() {
           <div className="section-head">
             <div className="section-tag">Каталог</div>
             <h2>Матрасы, подушки и топперы из латекса</h2>
-            <p>Три категории матрасов, готовая линейка латексных подушек и листовой латекс на топперы — весь спальный комплект из одного материала.</p>
+            <p>Две конструкции матрасов, готовая линейка латексных подушек и листовой латекс на топперы — весь спальный комплект из одного материала.</p>
           </div>
           <div className="cat-grid">
             {[
@@ -139,14 +139,14 @@ export default async function HomePage() {
                 label: "Матрасы",
                 title: "Пружинные",
                 text: "Бельгийский латекс + независимый пружинный блок с 7 анатомическими зонами.",
-                img: "/img/mattress/latex-block-dual.webp",
+                img: "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
               },
               {
                 href: "/matrasy/bespruzhinnye/",
                 label: "Матрасы",
                 title: "Беспружинные",
-                text: "Монолитные блоки цельного латекса 10–24 см — точечная поддержка без пружин.",
-                img: "/img/mattress/latex-block-dia.webp",
+                text: "Монолитные блоки цельного латекса 10–26 см — точечная поддержка без пружин.",
+                img: "/img/mattress/bespruzhinnyy-lateks-pod-chekhlom.webp",
               },
               {
                 href: "/podushki/",
@@ -213,15 +213,15 @@ export default async function HomePage() {
             <div className="layers-grid anatomy-grid">
               <div className="anatomy-photo">
                 <Image
-                  src="/img/mattress/latex-block-dual.webp"
-                  alt="Латексный блок матраса Eco Latex крупным планом"
-                  width={900}
-                  height={800}
+                  src="/img/mattress/pruzhinnyy-matras-v-razreze.webp"
+                  alt="Матрас Eco Latex в разрезе: слои латекса и независимый пружинный блок"
+                  width={1200}
+                  height={588}
                   sizes="(max-width: 900px) 100vw, 600px"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <p className="anatomy-caption">
-                  Перфорированный латексный блок — основа комфортных слоёв
+                  Слои бельгийского латекса и независимый пружинный блок в разрезе
                 </p>
               </div>
               <LayerList layers={flagshipLayers.layers} />
@@ -243,7 +243,7 @@ export default async function HomePage() {
           </div>
           <div className="center mt-40">
             <Link href="/matrasy/" className="btn btn-primary">
-              Весь каталог из 11 моделей
+              Весь каталог из 9 моделей
             </Link>
           </div>
         </div>

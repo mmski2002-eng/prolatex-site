@@ -2067,7 +2067,7 @@ footer.site-footer {
       rgba(233, 232, 226, 0.45) 70%,
       rgba(233, 232, 226, 0.15) 100%
     ),
-    url("/img/mattress/latex-block-dia.webp") center / auto 100% no-repeat,
+    url("/img/mattress/pruzhinnyy-matras-v-chekhle.webp") center / auto 100% no-repeat,
     #e9e8e2;
 }
 .hero-grid-single {
@@ -2077,7 +2077,7 @@ footer.site-footer {
   .hero.hero-photo {
     background:
       linear-gradient(rgba(233, 232, 226, 0.9), rgba(233, 232, 226, 0.9)),
-      url("/img/mattress/latex-block-dia.webp") center / cover no-repeat,
+      url("/img/mattress/pruzhinnyy-matras-v-chekhle.webp") center / cover no-repeat,
       #e9e8e2;
   }
   .hero-grid-single {

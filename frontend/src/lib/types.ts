@@ -21,6 +21,24 @@ export interface MattressCategory {
   meta_description?: string;
 }
 
+export interface MattressImage {
+  src: string;
+  label: string;
+  alt: string;
+}
+
+export interface MattressVideo {
+  src: string;
+  poster: string;
+  label: string;
+  alt: string;
+}
+
+export interface MattressHighlight {
+  title: string;
+  text: string;
+}
+
 export interface MattressModel {
   slug: string;
   name: string;
@@ -36,9 +54,15 @@ export interface MattressModel {
   dual_sided?: boolean;
   summary: string;
   audience: string;
-  /** Иллюстративный рендер латексного блока из техпаспорта Novaya. */
+  /** Главное фото карточки (матрас в чехле). */
   image?: string;
   image_note?: string;
+  /** Галерея карточки: ракурсы и фото в разрезе. */
+  images?: MattressImage[];
+  /** Видео карточки — своё для пружинных и беспружинных. */
+  video?: MattressVideo;
+  /** Развёрнутые преимущества модели (беспружинная линейка). */
+  highlights?: MattressHighlight[];
   /** Рекомендованный SEO-description (120–170 симв.). */
   meta_description?: string;
 }

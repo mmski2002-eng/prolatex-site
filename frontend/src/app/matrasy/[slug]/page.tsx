@@ -185,33 +185,31 @@ async function ModelPage({ slug }: { slug: string }) {
                 <MediaGallery
                   aspect="4/3"
                   items={[
-                    {
-                      type: "image",
-                      src: model.image,
-                      alt: `Матрас ${model.name} — латексный блок в основе модели`,
-                      label: "Латексный блок",
-                    },
-                    {
-                      type: "video",
-                      src: "/video/novaya-dunlopblocks-video-v4.mp4",
-                      poster: "/video/posters/novaya-dunlopblocks-video-v4.jpg",
-                      alt: "Видео: производство латексных блоков Dunlop",
-                      label: "Производство",
-                    },
-                    {
-                      type: "video",
-                      src: "/video/output.mp4",
-                      poster: "/video/posters/output.jpg",
-                      alt: "Видео: тест прочности латексного матраса",
-                      label: "Тест прочности",
-                    },
+                    ...(model.images ?? [
+                      {
+                        src: model.image,
+                        alt: `Матрас ${model.name}`,
+                        label: "Фото",
+                      },
+                    ]).map((img) => ({
+                      type: "image" as const,
+                      src: img.src,
+                      alt: img.alt,
+                      label: img.label,
+                    })),
+                    ...(model.video
+                      ? [
+                          {
+                            type: "video" as const,
+                            src: model.video.src,
+                            poster: model.video.poster,
+                            alt: model.video.alt,
+                            label: model.video.label,
+                          },
+                        ]
+                      : []),
                   ]}
                 />
-                {model.image_note && (
-                  <figcaption style={{ fontSize: 12.5, color: "var(--gray-soft)", marginTop: 8 }}>
-                    {model.image_note}
-                  </figcaption>
-                )}
               </figure>
             )}
 
@@ -254,6 +252,27 @@ async function ModelPage({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {model.highlights && model.highlights.length > 0 && (
+        <section aria-label={`Преимущества матраса ${model.name}`}>
+          <div className="wrap">
+            <div className="section-head">
+              <div className="section-tag">Почему эта модель</div>
+              <h2>Матрас {model.name} — что вы получаете</h2>
+            </div>
+            <div className="grid-3">
+              {model.highlights.map((h) => (
+                <div className="cell" key={h.title}>
+                  <h3>{h.title}</h3>
+                  <p className="mt-8" style={{ color: "var(--gray)", fontSize: 14 }}>
+                    {h.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {hasSprings && (
         <section aria-label="Пружинный блок">
           <div className="wrap">
@@ -267,7 +286,10 @@ async function ModelPage({ slug }: { slug: string }) {
         </section>
       )}
 
-      <section className={hasSprings ? "tint" : undefined} aria-label="Размеры">
+      <section
+        className={hasSprings || model.highlights?.length ? "tint" : undefined}
+        aria-label="Размеры"
+      >
         <div className="wrap">
           <div className="section-head">
             <div className="section-tag">Размеры</div>
