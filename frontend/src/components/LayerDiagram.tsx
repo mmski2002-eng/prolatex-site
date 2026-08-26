@@ -5,7 +5,10 @@ interface ParsedLayer {
   weight: number;
 }
 
-const COLORS = ["#F7F2EA", "#EDE1CC", "#D8C4A6", "#F1EAE0", "#E6E9EC"];
+const SAND = ["#F7F2EA", "#EFE3CF", "#E4D2B4", "#F2E9DA", "#EAD9BE"];
+const SPRING_FILL = "#DCEBE2";
+const SAND_STROKE = "#b99b72";
+const SPRING_STROKE = "#2e6b4e";
 
 function parseLayer(raw: string, index: number): ParsedLayer {
   const cmMatch = raw.match(/(\d+)\s*см/);
@@ -42,9 +45,12 @@ export default function LayerDiagram({
     return acc;
   }, []);
 
+  let sandIdx = 0;
   const rects = parsed.map((layer, i) => {
     const h = heights[i];
     const y = offsets[i];
+    const spring = /пружин/i.test(layer.raw);
+    const fill = spring ? SPRING_FILL : SAND[sandIdx++ % SAND.length];
     return (
       <g key={i}>
         <rect
@@ -52,8 +58,8 @@ export default function LayerDiagram({
           y={y}
           width={boxWidth}
           height={Math.max(h - 2, 6)}
-          fill={COLORS[i % COLORS.length]}
-          stroke="#E6E9EC"
+          fill={fill}
+          stroke={spring ? SPRING_STROKE : SAND_STROKE}
         />
         <line
           x1={20 + boxWidth}
