@@ -2139,6 +2139,27 @@ footer.site-footer {
   text-transform: uppercase;
   color: var(--eco);
 }
+.pillow-benefits {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  list-style: none;
+  font-size: 14px;
+  color: var(--gray);
+}
+.pillow-benefits li {
+  position: relative;
+  margin-bottom: 6px;
+}
+.pillow-benefits li::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--sand-dark);
+}
 .pillow-video-link {
   display: block;
   margin-top: 12px;

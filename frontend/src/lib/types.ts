@@ -98,13 +98,18 @@ export interface PillowModel {
 
 export interface RetailPillow {
   name: string;
-  base_model: string;
+  /** Код формы Novaya — только у моделей, собранных на её базе. */
+  base_model?: string;
   type: string;
-  length_mm: number;
-  width_mm: number;
-  height_mm: number;
-  size_label: string;
+  length_mm?: number;
+  width_mm?: number;
+  height_mm?: number;
+  size_label?: string;
   packaging: string;
+  /** Модель снята с витрины: данные остаются, на сайте не показывается. */
+  hidden?: boolean;
+  /** Короткие тезисы для карточки (из описания производителя). */
+  benefits?: string[];
   /** Фото модели (в чехле) + дополнительные ракурсы. */
   image?: string;
   image_latex?: string;

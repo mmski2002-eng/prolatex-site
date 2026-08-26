@@ -10,7 +10,7 @@ import MediaGallery from "@/components/MediaGallery";
 export const metadata: Metadata = {
   title: { absolute: "Латексные подушки: купить подушку из латекса, цены" },
   description:
-    "Латексные подушки Про-Латекс: пять готовых моделей — классические Soap и анатомические Ergo. Составы Dunlop Classic и Natural, три жёсткости. Цена по запросу.",
+    "Латексные подушки Про-Латекс: LatexPillow и TopPillow с наполнителем из перфорированного бельгийского латекса и съёмным чехлом. Средняя жёсткость. Цена по запросу.",
   alternates: { canonical: "/podushki/" },
   openGraph: ogMeta({ url: "/podushki/" }),
 };
@@ -45,7 +45,7 @@ export default async function PodushkiPage() {
               <h2>{data.retail_line.title}</h2>
               <p>{data.retail_line.description}</p>
             </div>
-            <div className="grid-3">
+            <div className={data.retail_line.models.length > 2 ? "grid-3" : "grid-2"}>
               {data.retail_line.models.map((m) => {
                 return (
                   <div className="cell pillow-card" key={m.name}>
@@ -74,17 +74,27 @@ export default async function PodushkiPage() {
                     {m.subtitle && (
                       <p className="pillow-subtitle">{m.subtitle}</p>
                     )}
-                    {m.description && (
-                      <p className="mt-8" style={{ color: "var(--gray)", fontSize: 14, flex: 1 }}>
-                        {m.description}
-                      </p>
-                    )}
+                    <div style={{ flex: 1 }}>
+                      {m.description && (
+                        <p className="mt-8" style={{ color: "var(--gray)", fontSize: 14 }}>
+                          {m.description}
+                        </p>
+                      )}
+                      {m.benefits && m.benefits.length > 0 && (
+                        <ul className="pillow-benefits mt-8">
+                          {m.benefits.map((b) => (
+                            <li key={b}>{b}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                     <div className="spec-table mt-16">
                       <div className="spec-row">
                         <span>Размер</span>
                         <b>
-                          {m.length_mm / 10}×{m.width_mm / 10}×
-                          {m.height_mm / 10} см
+                          {m.length_mm && m.width_mm && m.height_mm
+                            ? `${m.length_mm / 10}×${m.width_mm / 10}×${m.height_mm / 10} см`
+                            : "По запросу"}
                         </b>
                       </div>
                       {m.material && (
@@ -140,9 +150,6 @@ export default async function PodushkiPage() {
               </div>
             ))}
           </div>
-          <p style={{ marginTop: 24, color: "var(--gray)" }}>
-            Доступные уровни жёсткости: {data.firmness_options.join(", ")}.
-          </p>
         </div>
       </section>
 
@@ -169,7 +176,7 @@ export default async function PodushkiPage() {
             <LeadForm
               source="podushki-page"
               title="Узнать цену подушки"
-              subtitle="Укажите в комментарии модель (EasyPillow, SleepSoft, PillowEase, BreathSoft или BreezePillow) — ответим с точной ценой."
+              subtitle="Укажите в комментарии модель (LatexPillow или TopPillow) — ответим с точной ценой."
             />
           </div>
         </div>

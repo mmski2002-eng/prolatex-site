@@ -54,7 +54,15 @@ export async function getMattressesData(): Promise<MattressesData> {
 
 export async function getPillowsData(): Promise<PillowsData> {
   const wp = await tryWpFetch<PillowsData>("/prolatex/v1/pillows");
-  return wp ?? localPillows;
+  const data = wp ?? localPillows;
+  if (!data.retail_line) return data;
+  return {
+    ...data,
+    retail_line: {
+      ...data.retail_line,
+      models: data.retail_line.models.filter((m) => !m.hidden),
+    },
+  };
 }
 
 export async function getToppersData(): Promise<ToppersData> {

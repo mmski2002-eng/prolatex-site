@@ -152,8 +152,8 @@ export default async function HomePage() {
                 href: "/podushki/",
                 label: "Подушки",
                 title: "Латексные подушки",
-                text: "Пять готовых моделей: классические Soap и анатомические Ergo.",
-                img: "/img/pillows/k959-breezepillow.webp",
+                text: "Две готовые модели с наполнителем из перфорированного бельгийского латекса.",
+                img: "/img/pillows/prolatex-pillow-v-chekhle.webp",
               },
               {
                 href: "/toppery/",

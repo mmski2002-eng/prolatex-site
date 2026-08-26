@@ -68,18 +68,18 @@ export async function GET(req: NextRequest) {
 
   for (const p of pillows.retail_line?.models ?? []) {
     offers.push({
-      id: `pillow-${p.base_model.toLowerCase()}`,
+      id: `pillow-${(p.base_model ?? p.name).toLowerCase()}`,
       name: `Латексная подушка ${p.name}`,
       url: `${SITE_URL}/podushki/`,
       price: null,
       categoryId: 2,
       picture: p.image ? `${SITE_URL}${p.image}` : undefined,
-      description: `Латексная подушка ${p.name} на базе формы ${p.base_model}. Упаковка: ${p.packaging.toLowerCase()}.`,
+      description: `Латексная подушка ${p.name}${p.base_model ? ` на базе формы ${p.base_model}` : ""}. Упаковка: ${p.packaging.toLowerCase()}.`,
       params: [
-        { name: "Длина", value: String(p.length_mm / 10), unit: "см" },
-        { name: "Ширина", value: String(p.width_mm / 10), unit: "см" },
-        { name: "Высота", value: String(p.height_mm / 10), unit: "см" },
-        { name: "Форма", value: p.base_model },
+        ...(p.length_mm ? [{ name: "Длина", value: String(p.length_mm / 10), unit: "см" }] : []),
+        ...(p.width_mm ? [{ name: "Ширина", value: String(p.width_mm / 10), unit: "см" }] : []),
+        ...(p.height_mm ? [{ name: "Высота", value: String(p.height_mm / 10), unit: "см" }] : []),
+        ...(p.base_model ? [{ name: "Форма", value: p.base_model }] : []),
         { name: "Материал", value: "Натуральный латекс (Dunlop)" },
       ],
     });

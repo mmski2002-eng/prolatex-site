@@ -44,7 +44,7 @@ export default async function B2BPage() {
             </p>
             <div className="b2b-facts">
               <div className="b2b-fact"><b>с 2009</b><span>года на рынке латекса</span></div>
-              <div className="b2b-fact"><b>9 + 5</b><span>моделей матрасов и подушек</span></div>
+              <div className="b2b-fact"><b>9 + 2</b><span>модели матрасов и подушек</span></div>
               <div className="b2b-fact"><b>15–20 лет</b><span>срок службы изделий</span></div>
               <div className="b2b-fact"><b>СПб</b><span>собственный склад, отгрузка по РФ</span></div>
             </div>
@@ -80,7 +80,7 @@ export default async function B2BPage() {
             <div className="section-tag">Модельный ряд</div>
             <h2>Что вы сможете продавать</h2>
             <p>
-              9 моделей матрасов в двух конструкциях и 5 готовых подушек.
+              9 моделей матрасов в двух конструкциях и 2 готовые подушки.
               Полные характеристики — в карточках, фото всего ряда — в архиве
               для партнёров ниже.
             </p>
@@ -107,7 +107,7 @@ export default async function B2BPage() {
               </Link>
             ))}
           </div>
-          <h3 style={{ margin: "40px 0 20px" }}>Подушки — {retail.length} моделей</h3>
+          <h3 style={{ margin: "40px 0 20px" }}>Подушки — {retail.length} {retail.length < 5 ? "модели" : "моделей"}</h3>
           <div className="grid-4">
             {retail.map((p) => (
               <Link href="/podushki/" className="cell" key={p.name} style={{ display: "block" }}>
@@ -124,7 +124,8 @@ export default async function B2BPage() {
                 )}
                 <b style={{ fontSize: 15 }}>{p.name}</b>
                 <p style={{ fontSize: 13, color: "var(--gray)" }}>
-                  {p.length_mm / 10}×{p.width_mm / 10}×{p.height_mm / 10} см · форма {p.base_model}
+                  {p.size_label ?? "размер по запросу"}
+                  {p.base_model ? ` · форма ${p.base_model}` : ""}
                 </p>
               </Link>
             ))}
