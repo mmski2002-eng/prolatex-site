@@ -6,7 +6,7 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: { absolute: "Контакты компании Про-Латекс: адрес, телефон, e-mail" },
   description:
-    "Контакты Про-Латекс: телефон, e-mail и форма заявки. Поможем выбрать матрас, подушку или топпер из натурального латекса.",
+    "Контакты Про-Латекс: телефон, e-mail и форма заявки. Поможем выбрать матрас, подушку или тонкий матрас из натурального латекса.",
   alternates: { canonical: "/kontakty/" },
   openGraph: ogMeta({ url: "/kontakty/" }),
 };

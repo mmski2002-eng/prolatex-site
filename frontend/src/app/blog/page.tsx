@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Блог о натуральном латексе: гайды и статьи",
   description:
-    "Экспертные статьи о натуральном латексе: технологии Dunlop и Pulse, выбор жёсткости матраса, латексные подушки и топперы.",
+    "Экспертные статьи о натуральном латексе: технологии Dunlop и Pulse, выбор жёсткости матраса, латексные подушки и тонкие матрасы.",
   alternates: { canonical: "/blog/" },
   openGraph: ogMeta({ url: "/blog/" }),
 };
@@ -26,7 +26,7 @@ export default async function BlogPage() {
           <h1 className="page-h1">Блог о натуральном латексе</h1>
           <p className="lead">
             Разбираем материал, технологии производства и практику выбора
-            матраса, подушки и топпера из латекса.
+            матраса, подушки и тонкого матраса из латекса.
           </p>
         </div>
       </section>

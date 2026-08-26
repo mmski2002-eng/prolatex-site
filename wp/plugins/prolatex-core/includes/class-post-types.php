@@ -64,11 +64,11 @@ class Post_Types {
 			)
 		);
 
-		// Топперы.
+		// Тонкие матрасы.
 		register_post_type(
 			'topper',
 			array(
-				'labels'             => $this->labels( 'Топпер', 'Топперы' ),
+				'labels'             => $this->labels( 'Тонкий матрас', 'Тонкие матрасы' ),
 				'public'              => true,
 				'has_archive'         => 'toppery',
 				'rewrite'             => array( 'slug' => 'toppery', 'with_front' => false ),
@@ -157,7 +157,7 @@ class Post_Types {
 			array(
 				'pruzhinnye'    => 'Пружинные',
 				'bespruzhinnye' => 'Беспружинные',
-				's-topperom'    => 'С топпером',
+				's-topperom'    => 'С тонким матрасом',
 			)
 		);
 

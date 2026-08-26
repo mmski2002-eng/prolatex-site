@@ -7,9 +7,9 @@ import VideoBlock from "@/components/VideoBlock";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: { absolute: "Латексный топпер — купить наматрасник из латекса, цены" },
+  title: { absolute: "Тонкий латексный матрас — купить наматрасник из латекса, цены" },
   description:
-    "Топперы из листового латекса Про-Латекс по технологии Pulse: толщина 30–60 мм, плотность 55/65 кг/м³, Solid/микроперфорация/7-зонная перфорация, GelPulse.",
+    "Тонкие матрасы из листового латекса Про-Латекс по технологии Pulse: толщина 30–60 мм, плотность 55/65 кг/м³, Solid/микроперфорация/7-зонная перфорация, GelPulse.",
   alternates: { canonical: "/toppery/" },
   openGraph: ogMeta({ url: "/toppery/" }),
 };
@@ -19,10 +19,10 @@ export default async function TopperyPage() {
 
   return (
     <>
-      <Breadcrumbs items={[{ name: "Топперы", path: "/toppery/" }]} />
+      <Breadcrumbs items={[{ name: "Тонкие матрасы", path: "/toppery/" }]} />
       <section className="page-hero" style={{ paddingTop: 8 }}>
         <div className="wrap">
-          <h1 className="page-h1">Латексный топпер из листового латекса Pulse</h1>
+          <h1 className="page-h1">Тонкий латексный матрас из листового латекса Pulse</h1>
           <p className="lead">{data.intro}</p>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default async function TopperyPage() {
         <div className="wrap">
           <div className="section-head">
             <div className="section-tag">Параметры</div>
-            <h2>Толщина и плотность топпера</h2>
+            <h2>Толщина и плотность тонкого матраса</h2>
           </div>
           <div className="grid-2">
             <div className="cell">
@@ -65,7 +65,7 @@ export default async function TopperyPage() {
 
           <div className="section-head" style={{ marginTop: 56 }}>
             <h2 style={{ fontSize: "clamp(22px, 2.4vw, 30px)" }}>
-              Варианты топперов Pulse
+              Варианты тонких матрасов Pulse
             </h2>
             <p>Восемь базовых позиций: любая толщина в двух плотностях. Раскрой под ваш размер матраса.</p>
           </div>
@@ -73,7 +73,7 @@ export default async function TopperyPage() {
             {data.thickness_mm.flatMap((mm) =>
               data.densities.map((d) => (
                 <div className="cell" key={`${mm}-${d.kg_m3}`}>
-                  <h3>Топпер {mm} мм</h3>
+                  <h3>Тонкий матрас {mm} мм</h3>
                   <p className="mt-8" style={{ color: "var(--gray)" }}>
                     Плотность {d.kg_m3} кг/м³ ({d.name.toLowerCase()})
                   </p>
@@ -157,7 +157,7 @@ export default async function TopperyPage() {
           <p style={{ color: "var(--gray)" }}>
             Хотите обновить старый матрас без замены — читайте статью{" "}
             <Link href="/blog/topper-iz-lateksa/" style={{ color: "var(--sand-deep)", fontWeight: 700 }}>
-              «Латексный топпер: обновить матрас без замены»
+              «Тонкий латексный матрас: обновить спальное место без замены»
             </Link>
             .
           </p>
@@ -167,7 +167,7 @@ export default async function TopperyPage() {
       <section className="cta-section" id="topper-lead" aria-label="Заявка">
         <div className="wrap cta-grid">
           <div>
-            <h2>Заказать топпер под ваш размер</h2>
+            <h2>Заказать тонкий матрас под ваш размер</h2>
             <p>Укажите толщину, плотность и размер матраса — рассчитаем стоимость раскроя.</p>
           </div>
           <LeadForm source="toppery-page" />

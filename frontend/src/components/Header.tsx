@@ -12,7 +12,7 @@ const MATRASY_LINKS = [
 
 const NAV = [
   { href: "/podushki/", label: "Подушки" },
-  { href: "/toppery/", label: "Топперы" },
+  { href: "/toppery/", label: "Тонкие матрасы" },
   { href: "/tehnologii/", label: "Технологии" },
   { href: "/o-latekse/", label: "О латексе" },
   { href: "/proizvodstvo/", label: "Производство" },

@@ -11,7 +11,7 @@ export default function Footer() {
               <Image src="/logo-400.png" alt="Про-Латекс" width={140} height={34} style={{ height: 34, width: "auto" }} />
             </div>
             <p>
-              Матрасы, подушки и топперы из 100% натурального бельгийского
+              Матрасы, подушки и тонкие матрасы из 100% натурального бельгийского
               латекса. Специалист по натуральному латексу. Компания основана в 2009 году.
             </p>
           </div>
@@ -22,7 +22,7 @@ export default function Footer() {
               <li><Link href="/matrasy/pruzhinnye/">Пружинные матрасы</Link></li>
               <li><Link href="/matrasy/bespruzhinnye/">Беспружинные матрасы</Link></li>
               <li><Link href="/podushki/">Латексные подушки</Link></li>
-              <li><Link href="/toppery/">Латексные топперы</Link></li>
+              <li><Link href="/toppery/">Тонкие латексные матрасы</Link></li>
             </ul>
           </div>
           <div className="footer-col">

@@ -223,7 +223,7 @@ async function ModelPage({ slug }: { slug: string }) {
                 <div className="spec-row"><span>Пружинный блок</span><b>{data.common.spring_block}</b></div>
               )}
               {model.topper_cm && (
-                <div className="spec-row"><span>Топпер</span><b>{model.topper_cm} см</b></div>
+                <div className="spec-row"><span>Тонкий матрас</span><b>{model.topper_cm} см</b></div>
               )}
               <div className="spec-row"><span>Чехол</span><b>{data.common.cover}</b></div>
               <div className="spec-row"><span>Макс. нагрузка</span><b>{data.common.max_weight_per_place_kg} кг на спальное место</b></div>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: ProLatex Core
- * Description: Headless-бэкенд для сайта ProLatex (Про-Латекс): CPT матрасов/подушек/топперов/отзывов/заявок, REST-эндпоинт лидов, безопасность и импорт данных.
+ * Description: Headless-бэкенд для сайта ProLatex (Про-Латекс): CPT матрасов/подушек/тонких матрасов/отзывов/заявок, REST-эндпоинт лидов, безопасность и импорт данных.
  * Version: 1.0.0
  * Author: ProLatex
  * Text Domain: prolatex-core

@@ -140,7 +140,7 @@ class Meta {
 		$this->string_array_field( $pt, 'layers', 'Слои матраса сверху вниз' );
 		$this->integer_field( $pt, 'latex_total_cm', 'Суммарная толщина латекса, см' );
 		$this->integer_field( $pt, 'spring_height_cm', 'Высота пружинного блока, см (0 — беспружинный)' );
-		$this->integer_field( $pt, 'topper_cm', 'Толщина интегрированного топпера, см (0 — без топпера)' );
+		$this->integer_field( $pt, 'topper_cm', 'Толщина интегрированного тонкого матраса, см (0 — без тонкого матраса)' );
 		$this->boolean_field( $pt, 'dual_sided', 'Двусторонняя разная жёсткость' );
 		$this->string_field( $pt, 'summary', 'Короткое описание модели' );
 		$this->string_field( $pt, 'audience', 'Кому подходит модель' );
@@ -172,7 +172,7 @@ class Meta {
 	}
 
 	/**
-	 * Топперы (toppers.json) — запись-конфигуратор Pulse Classic.
+	 * Тонкие матрасы (toppers.json) — запись-конфигуратор Pulse Classic.
 	 */
 	private function register_topper_meta() {
 		$pt = 'topper';

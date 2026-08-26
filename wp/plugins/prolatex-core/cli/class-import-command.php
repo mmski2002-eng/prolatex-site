@@ -17,7 +17,7 @@ require_once PROLATEX_CORE_DIR . 'includes/class-articles-content.php';
 class Import_Command {
 
 	/**
-	 * Импортирует матрасы, подушки, топперы, отзывы и статьи блога из /data/*.json.
+	 * Импортирует матрасы, подушки, тонкие матрасы, отзывы и статьи блога из /data/*.json.
 	 *
 	 * ## OPTIONS
 	 *
@@ -54,7 +54,7 @@ class Import_Command {
 
 		\WP_CLI::success(
 			sprintf(
-				'Импорт завершён. Матрасов: %d, подушек: %d, топперов: %d, отзывов: %d, статей: %d.',
+				'Импорт завершён. Матрасов: %d, подушек: %d, тонких матрасов: %d, отзывов: %d, статей: %d.',
 				$stats['mattress'],
 				$stats['pillow'],
 				$stats['topper'],
@@ -272,7 +272,7 @@ class Import_Command {
 	}
 
 	/**
-	 * Топперы: data/toppers.json — одна запись-конфигуратор Pulse Classic.
+	 * Тонкие матрасы: data/toppers.json — одна запись-конфигуратор Pulse Classic.
 	 */
 	private function import_toppers( $dry_run ) {
 		$data = $this->read_json( 'toppers.json' );
@@ -285,7 +285,7 @@ class Import_Command {
 		$lengths            = $mattresses_common['common']['lengths_cm'] ?? array();
 
 		$slug    = 'pulse-classic';
-		$title   = 'Топпер Pulse Classic';
+		$title   = 'Тонкий матрас Pulse Classic';
 		$content = sprintf( '<p>%s</p>', esc_html( $data['intro'] ) );
 
 		$post_id = $this->upsert_post(
@@ -316,7 +316,7 @@ class Import_Command {
 		update_post_meta( $post_id, 'sizes_widths_cm', array_values( $widths ) );
 		update_post_meta( $post_id, 'sizes_lengths_cm', array_values( $lengths ) );
 
-		\WP_CLI::log( "Топпер-конфигуратор: {$title} -> ID {$post_id}" );
+		\WP_CLI::log( "Тонкий матрас-конфигуратор: {$title} -> ID {$post_id}" );
 		return 1;
 	}
 

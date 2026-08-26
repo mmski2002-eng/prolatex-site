@@ -35,7 +35,7 @@ export default function ModelCard({ model }: { model: MattressModel }) {
         <div className="tag-row">
           <span className="tag sand">{firmnessLabel(model.firmness_scale)}</span>
           {model.dual_sided && <span className="tag">Две стороны</span>}
-          {model.topper_cm && <span className="tag">Топпер {model.topper_cm} см</span>}
+          {model.topper_cm && <span className="tag">Тонкий матрас {model.topper_cm} см</span>}
         </div>
         <span className="btn btn-outline" style={{ pointerEvents: "none" }}>
           Подробнее о модели
