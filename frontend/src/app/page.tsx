@@ -159,7 +159,7 @@ export default async function HomePage() {
                 href: "/toppery/",
                 label: "Тонкие матрасы",
                 title: "Тонкие латексные матрасы",
-                text: "Листовой латекс 30–60 мм — обновите старый матрас без замены.",
+                text: "Листовой латекс 20–50 мм — обновите старый матрас без замены.",
                 img: "/img/mattress/topper-gelpulse.webp",
               },
             ].map((c) => (

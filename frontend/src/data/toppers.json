@@ -2,18 +2,145 @@
   "intro": "Тонкие латексные матрасы (наматрасники) Про-Латекс изготавливаются из листового латекса по запатентованной технологии Pulse — вулканизация радиоволнами изнутри наружу. Результат: равномерная структура, повышенная упругость и максимальная вентиляция. Состав Classic — 50% натурального латекса.",
   "technology": "Pulse (диэлектрический нагрев — самая экологичная технология вулканизации латекса на рынке)",
   "blend": "Classic — 50% натуральный латекс",
-  "thickness_mm": [30, 40, 50, 60],
+  "thickness_mm": [
+    20,
+    30,
+    40,
+    50
+  ],
   "densities": [
-    { "kg_m3": 55, "feel": "extra soft", "name": "Экстра-мягкий" },
-    { "kg_m3": 65, "feel": "soft", "name": "Мягкий" }
+    {
+      "kg_m3": 55,
+      "feel": "extra soft",
+      "name": "Экстра-мягкий"
+    },
+    {
+      "kg_m3": 65,
+      "feel": "soft",
+      "name": "Мягкий"
+    }
+  ],
+  "models": [
+    {
+      "slug": "cloud-sleep",
+      "name": "Cloud Sleep",
+      "thickness_mm": 20,
+      "summary": "Тонкий корректирующий слой: смягчает жёсткую поверхность матраса, почти не меняя высоту спального места.",
+      "images": [
+        {
+          "src": "/img/toppers/topper-cover-top.webp",
+          "label": "В чехле"
+        },
+        {
+          "src": "/img/toppers/topper-cover-open.webp",
+          "label": "Чехол расстёгнут"
+        },
+        {
+          "src": "/img/toppers/topper-latex-7zone.webp",
+          "label": "Латекс, 7 зон"
+        },
+        {
+          "src": "/img/toppers/topper-side-cut.webp",
+          "label": "Вид сбоку"
+        }
+      ]
+    },
+    {
+      "slug": "soft-cloud",
+      "name": "Soft Cloud",
+      "thickness_mm": 30,
+      "summary": "Базовое обновление матраса: мягкий лист латекса Pulse в съёмном чехле на молнии.",
+      "images": [
+        {
+          "src": "/img/toppers/topper-cover-top.webp",
+          "label": "В чехле"
+        },
+        {
+          "src": "/img/toppers/topper-cover-open.webp",
+          "label": "Чехол расстёгнут"
+        },
+        {
+          "src": "/img/toppers/topper-latex-7zone.webp",
+          "label": "Латекс, 7 зон"
+        },
+        {
+          "src": "/img/toppers/topper-side-cut.webp",
+          "label": "Вид сбоку"
+        }
+      ]
+    },
+    {
+      "slug": "pure-cloud",
+      "name": "Pure Cloud",
+      "thickness_mm": 40,
+      "summary": "Выраженный комфортный слой с перфорацией: усиленная вентиляция и снятие точек давления.",
+      "images": [
+        {
+          "src": "/img/toppers/topper-cover-top.webp",
+          "label": "В чехле"
+        },
+        {
+          "src": "/img/toppers/topper-cover-open.webp",
+          "label": "Чехол расстёгнут"
+        },
+        {
+          "src": "/img/toppers/topper-latex-7zone.webp",
+          "label": "Латекс, 7 зон"
+        },
+        {
+          "src": "/img/toppers/topper-side-cut.webp",
+          "label": "Вид сбоку"
+        }
+      ]
+    },
+    {
+      "slug": "cloud-layer",
+      "name": "Cloud Layer",
+      "thickness_mm": 50,
+      "summary": "Максимальная толщина линейки: скрывает рельеф старого матраса, подходит для жёстких оснований и диванов.",
+      "images": [
+        {
+          "src": "/img/toppers/topper-cover-top.webp",
+          "label": "В чехле"
+        },
+        {
+          "src": "/img/toppers/topper-cover-open.webp",
+          "label": "Чехол расстёгнут"
+        },
+        {
+          "src": "/img/toppers/topper-latex-7zone.webp",
+          "label": "Латекс, 7 зон"
+        },
+        {
+          "src": "/img/toppers/topper-side-cut.webp",
+          "label": "Вид сбоку"
+        }
+      ]
+    }
   ],
   "surface_options": [
-    { "slug": "solid", "name": "Solid", "description": "Однородная закрытая структура — максимальная прочность на разрыв и долговечность." },
-    { "slug": "microperforation", "name": "Микроперфорация", "description": "Плюшевое роскошное ощущение и усиленная вентиляция." },
-    { "slug": "7-zone", "name": "7-зонная перфорация", "description": "Зональная перфорация под анатомию тела: правильное положение позвоночника и снятие точек давления." }
+    {
+      "slug": "solid",
+      "name": "Solid",
+      "description": "Однородная закрытая структура — максимальная прочность на разрыв и долговечность."
+    },
+    {
+      "slug": "microperforation",
+      "name": "Микроперфорация",
+      "description": "Плюшевое роскошное ощущение и усиленная вентиляция."
+    },
+    {
+      "slug": "7-zone",
+      "name": "7-зонная перфорация",
+      "description": "Зональная перфорация под анатомию тела: правильное положение позвоночника и снятие точек давления."
+    }
   ],
   "addons": [
-    { "slug": "gelpulse", "name": "GelPulse", "description": "Гелевые частицы в структуре латекса: усиленная вентиляция и эффект прохлады за счёт накопления энергии в геле." }
+    {
+      "slug": "gelpulse",
+      "name": "GelPulse",
+      "description": "Гелевые частицы в структуре латекса: усиленная вентиляция и эффект прохлады за счёт накопления энергии в геле."
+    }
   ],
   "cut_to_size": true,
   "roll_length_m": 8,

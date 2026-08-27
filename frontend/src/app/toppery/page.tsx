@@ -5,11 +5,12 @@ import {ogMeta } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import VideoBlock from "@/components/VideoBlock";
 import LeadForm from "@/components/LeadForm";
+import MediaGallery from "@/components/MediaGallery";
 
 export const metadata: Metadata = {
   title: { absolute: "Тонкий латексный матрас — купить наматрасник из латекса, цены" },
   description:
-    "Тонкие матрасы из листового латекса Про-Латекс по технологии Pulse: толщина 30–60 мм, плотность 55/65 кг/м³, Solid/микроперфорация/7-зонная перфорация, GelPulse.",
+    "Тонкие матрасы из листового латекса Про-Латекс по технологии Pulse: толщина 20–50 мм, плотность 55/65 кг/м³, Solid/микроперфорация/7-зонная перфорация, GelPulse.",
   alternates: { canonical: "/toppery/" },
   openGraph: ogMeta({ url: "/toppery/" }),
 };
@@ -24,6 +25,60 @@ export default async function TopperyPage() {
         <div className="wrap">
           <h1 className="page-h1">Тонкий латексный матрас из листового латекса Pulse</h1>
           <p className="lead">{data.intro}</p>
+        </div>
+      </section>
+
+      <section className="tint" aria-label="Варианты тонких матрасов Pulse">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="section-tag">Модели</div>
+            <h2>Варианты тонких матрасов Pulse</h2>
+            <p>
+              Четыре модели толщиной от 20 до 50 мм. Каждая доступна в двух плотностях —
+              55 и 65 кг/м³. Раскрой под ваш размер матраса.
+            </p>
+          </div>
+          <div className="grid-2">
+            {(data.models ?? []).map((m) => (
+              <div className="cell pillow-card" key={m.slug}>
+                <MediaGallery
+                  aspect="16/10"
+                  items={m.images.map((img) => ({
+                    type: "image" as const,
+                    src: img.src,
+                    alt: `Тонкий матрас ${m.name} ${m.thickness_mm} мм — ${img.label.toLowerCase()}`,
+                    label: img.label,
+                  }))}
+                />
+                <h3>{m.name}</h3>
+                <p className="pillow-subtitle">Толщина {m.thickness_mm} мм</p>
+                <div style={{ flex: 1 }}>
+                  <p className="mt-8" style={{ color: "var(--gray)", fontSize: 14 }}>
+                    {m.summary}
+                  </p>
+                </div>
+                <div className="spec-table mt-16">
+                  <div className="spec-row">
+                    <span>Толщина</span>
+                    <b>{m.thickness_mm} мм</b>
+                  </div>
+                  {data.densities.map((d) => (
+                    <div className="spec-row" key={d.kg_m3}>
+                      <span>Плотность {d.name.toLowerCase()}</span>
+                      <b>{d.kg_m3} кг/м³</b>
+                    </div>
+                  ))}
+                  <div className="spec-row">
+                    <span>Цена</span>
+                    <b>По запросу</b>
+                  </div>
+                </div>
+                <a href="#topper-lead" className="btn btn-sand btn-block" style={{ marginTop: 16 }}>
+                  Запросить цену
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -61,34 +116,6 @@ export default async function TopperyPage() {
                 ))}
               </ul>
             </div>
-          </div>
-
-          <div className="section-head" style={{ marginTop: 56 }}>
-            <h2 style={{ fontSize: "clamp(22px, 2.4vw, 30px)" }}>
-              Варианты тонких матрасов Pulse
-            </h2>
-            <p>Восемь базовых позиций: любая толщина в двух плотностях. Раскрой под ваш размер матраса.</p>
-          </div>
-          <div className="grid-4">
-            {data.thickness_mm.flatMap((mm) =>
-              data.densities.map((d) => (
-                <div className="cell" key={`${mm}-${d.kg_m3}`}>
-                  <h3>Тонкий матрас {mm} мм</h3>
-                  <p className="mt-8" style={{ color: "var(--gray)" }}>
-                    Плотность {d.kg_m3} кг/м³ ({d.name.toLowerCase()})
-                  </p>
-                  <div className="spec-table mt-16">
-                    <div className="spec-row">
-                      <span>Цена</span>
-                      <b>По запросу</b>
-                    </div>
-                  </div>
-                  <a href="#topper-lead" className="btn btn-outline btn-block" style={{ marginTop: 14 }}>
-                    Запросить цену
-                  </a>
-                </div>
-              ))
-            )}
           </div>
         </div>
       </section>

@@ -67,7 +67,8 @@ export async function getPillowsData(): Promise<PillowsData> {
 
 export async function getToppersData(): Promise<ToppersData> {
   const wp = await tryWpFetch<ToppersData>("/prolatex/v1/toppers");
-  return wp ?? localToppers;
+  if (!wp) return localToppers;
+  return { ...wp, models: wp.models ?? localToppers.models };
 }
 
 export async function getContentData(): Promise<ContentData> {

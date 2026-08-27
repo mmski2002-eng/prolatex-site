@@ -156,12 +156,26 @@ export interface TopperAddon {
   description: string;
 }
 
+export interface TopperModelImage {
+  src: string;
+  label: string;
+}
+
+export interface TopperModel {
+  slug: string;
+  name: string;
+  thickness_mm: number;
+  summary: string;
+  images: TopperModelImage[];
+}
+
 export interface ToppersData {
   intro: string;
   technology: string;
   blend: string;
   thickness_mm: number[];
   densities: TopperDensity[];
+  models?: TopperModel[];
   surface_options: TopperSurfaceOption[];
   addons: TopperAddon[];
   cut_to_size: boolean;
