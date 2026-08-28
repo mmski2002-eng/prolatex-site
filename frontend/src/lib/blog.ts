@@ -38,6 +38,7 @@ interface WpArticle {
 const WP_BASE = process.env.WP_API_URL || "http://localhost:8890/wp-json";
 const REVALIDATE = 300;
 const TIMEOUT_MS = 1500;
+const HIDDEN_ARTICLE_SLUGS = new Set(["rossijskij-ili-importnyj-lateksnyj-matras"]);
 
 async function wpFetch<T>(path: string): Promise<T | null> {
   if (process.env.WP_DISABLED === "1") return null;
@@ -82,10 +83,10 @@ function wpToItem(w: WpArticle): BlogListItem {
 
 /** Список статей для листинга: WP впереди (по дате), затем статические без дублей. */
 export async function getBlogArticles(): Promise<BlogListItem[]> {
-  const staticItems = ARTICLES.map(staticToItem);
+  const staticItems = ARTICLES.filter((a) => !HIDDEN_ARTICLE_SLUGS.has(a.slug)).map(staticToItem);
   const wp = await wpFetch<WpArticle[]>("/prolatex/v1/articles");
   if (!wp || wp.length === 0) return staticItems;
-  const wpItems = wp.map(wpToItem);
+  const wpItems = wp.filter((w) => !HIDDEN_ARTICLE_SLUGS.has(w.slug)).map(wpToItem);
   const wpSlugs = new Set(wpItems.map((w) => w.slug));
   const staticOnly = staticItems.filter((s) => !wpSlugs.has(s.slug));
   return [...wpItems, ...staticOnly];
@@ -93,6 +94,7 @@ export async function getBlogArticles(): Promise<BlogListItem[]> {
 
 /** Одна статья: сначала WP (HTML), при отсутствии — статическая (блоки). */
 export async function getBlogArticle(slug: string): Promise<BlogArticle | null> {
+  if (HIDDEN_ARTICLE_SLUGS.has(slug)) return null;
   const wp = await wpFetch<WpArticle>(`/prolatex/v1/articles/${slug}`);
   if (wp && wp.slug) {
     return { ...wpToItem(wp), html: wp.html };
@@ -104,7 +106,7 @@ export async function getBlogArticle(slug: string): Promise<BlogArticle | null> 
 
 /** Слаги статических статей для generateStaticParams (WP-статьи рендерятся динамически). */
 export function staticArticleSlugs(): string[] {
-  return ARTICLES.map((a) => a.slug);
+  return ARTICLES.filter((a) => !HIDDEN_ARTICLE_SLUGS.has(a.slug)).map((a) => a.slug);
 }
 
 export interface TocItem {

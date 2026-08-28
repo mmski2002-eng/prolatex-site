@@ -602,6 +602,39 @@ header.site-header {
   padding-bottom: 64px;
   width: 100%;
 }
+.origin-badge {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(6px);
+}
+.origin-badge-flags {
+  display: flex;
+  gap: 10px;
+}
+.origin-badge-flags img {
+  width: 54px;
+  height: 36px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.origin-badge span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -673,6 +706,7 @@ header.site-header {
   background: var(--sand-tint);
   padding: 56px 0 64px;
   border-bottom: 1px solid var(--line);
+  position: relative;
 }
 .page-hero p.lead {
   font-size: 17px;
@@ -1779,6 +1813,22 @@ footer.site-footer {
 @media (max-width: 640px) {
   .wrap {
     padding: 0 18px;
+  }
+  .origin-badge {
+    top: 16px;
+    right: 18px;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .origin-badge-flags {
+    gap: 6px;
+  }
+  .origin-badge-flags img {
+    width: 38px;
+    height: 25px;
+  }
+  .origin-badge span {
+    font-size: 11px;
   }
   section {
     padding: 60px 0;

@@ -1015,7 +1015,7 @@ const ARTICLES_RAW: Article[] = [
       },
       {
         type: "img",
-        src: "/img/blog/matras-s-lateksom-ili-pruzhinnyj/02.webp",
+        src: "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
         alt: "Анатомическая латексная подушка ProLatex — латексный блок и трикотажный чехол",
       },
       {
@@ -1112,7 +1112,7 @@ const ARTICLES_RAW: Article[] = [
       },
       {
         type: "img",
-        src: "/img/blog/matras-s-lateksom-ili-pruzhinnyj/03.webp",
+        src: "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
         alt: "Слой латексной пены крупным планом — упругая пористая структура",
       },
       { type: "h2", text: "Как выбрать жёсткость и тип по весу и позе сна" },

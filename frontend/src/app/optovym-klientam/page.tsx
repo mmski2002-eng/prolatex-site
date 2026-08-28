@@ -39,14 +39,24 @@ export default async function B2BPage() {
             <p className="lead">
               Про-Латекс поставляет матрасы, подушки и тонкие матрасы из 100%
               бельгийского латекса для розничных сетей, отелей и
-              дизайн-проектов. Работаем с 2009 года, отгрузка со склада в
-              Санкт-Петербурге.
+              дизайн-проектов. Работаем с 2009 года, отгрузка со складов в
+              Москве и Санкт-Петербурге.
             </p>
+            <div className="cell mt-24" style={{ border: "1px solid var(--line)" }}>
+              <span className="tag sand">СТМ</span>
+              <h2 className="mt-16" style={{ fontSize: 24 }}>Выпускаем товары под вашей торговой маркой</h2>
+              <p className="mt-16" style={{ color: "var(--gray)" }}>
+                Для розничных сетей, мебельных компаний и продавцов маркетплейсов
+                изготавливаем латексные матрасы, подушки и тонкие матрасы под
+                вашей собственной торговой маркой: с вашим брендом, размерной
+                матрицей и упаковкой.
+              </p>
+            </div>
             <div className="b2b-facts">
               <div className="b2b-fact"><b>с 2009</b><span>года на рынке латекса</span></div>
               <div className="b2b-fact"><b>9 + 2</b><span>модели матрасов и подушек</span></div>
               <div className="b2b-fact"><b>15–20 лет</b><span>срок службы изделий</span></div>
-              <div className="b2b-fact"><b>СПб</b><span>собственный склад, отгрузка по РФ</span></div>
+              <div className="b2b-fact"><b>Москва</b><span>склады в Москве и Санкт-Петербурге, отгрузка по РФ</span></div>
             </div>
           </div>
           <div className="b2b-quick">

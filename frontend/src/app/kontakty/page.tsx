@@ -29,8 +29,8 @@ export default function KontaktyPage() {
               <div className="spec-row"><span>E-mail</span><b><a href="mailto:info@pro-latex.ru">info@pro-latex.ru</a></b></div>
               <div className="spec-row"><span>Режим работы</span><b>Ежедневно, 9:00–20:00</b></div>
               <div className="spec-row">
-                <span>Адрес склада</span>
-                <b>195030, Санкт-Петербург, ул.&nbsp;Электропультовцев, д.&nbsp;7, литера&nbsp;Н</b>
+                <span>Склады</span>
+                <b>Москва и Санкт-Петербург</b>
               </div>
               <div className="spec-row"><span>Основана</span><b>в 2009 году</b></div>
               <div className="spec-row"><span>Продавец</span><b>ИП Карцев Алексей Сергеевич</b></div>
@@ -49,7 +49,7 @@ export default function KontaktyPage() {
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
                 style={{ border: 0, display: "block" }}
-                title="Карта: склад Про-Латекс, Санкт-Петербург, ул. Электропультовцев, 7"
+                title="Карта: склад Про-Латекс, Санкт-Петербург"
               />
             </div>
           </div>

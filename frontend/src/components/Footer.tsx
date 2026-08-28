@@ -41,7 +41,7 @@ export default function Footer() {
             <ul>
               <li><a href="tel:88047007750">8 (804) 700-77-50</a></li>
               <li><a href="mailto:info@pro-latex.ru">info@pro-latex.ru</a></li>
-              <li>Склад: Санкт-Петербург, ул.&nbsp;Электропультовцев, д.&nbsp;7, литера&nbsp;Н</li>
+              <li>Склады: Москва и Санкт-Петербург</li>
               <li><Link href="/dostavka-i-oplata/">Доставка и оплата</Link></li>
               <li><Link href="/kontakty/">Контакты</Link></li>
               <li><Link href="/optovym-klientam/">Оптовым клиентам</Link></li>

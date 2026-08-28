@@ -15,6 +15,7 @@ import QuizModal from "@/components/QuizModal";
 import LeadForm from "@/components/LeadForm";
 import VideoBlock from "@/components/VideoBlock";
 import { LayerList } from "@/components/LayerDiagram";
+import OriginBadge from "@/components/OriginBadge";
 
 export const metadata: Metadata = {
   title: { absolute: "Матрасы из натурального бельгийского латекса | Про-Латекс" },
@@ -71,6 +72,7 @@ export default async function HomePage() {
 
       <section className="hero hero-static hero-photo">
         <div className="hero-inner wrap">
+          <OriginBadge />
           <div className="hero-grid hero-grid-single">
             <div>
               <div className="badge">
@@ -104,6 +106,25 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Модели матрасов">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="section-tag">Модели</div>
+            <h2>Популярные латексные матрасы Про-Латекс</h2>
+          </div>
+          <div className="model-grid">
+            {featured.map((m) => (
+              <ModelCard model={m} key={m.slug} />
+            ))}
+          </div>
+          <div className="center mt-40">
+            <Link href="/matrasy/" className="btn btn-primary">
+              Весь каталог из 9 моделей
+            </Link>
           </div>
         </div>
       </section>
@@ -160,7 +181,7 @@ export default async function HomePage() {
                 label: "Тонкие матрасы",
                 title: "Тонкие латексные матрасы",
                 text: "Листовой латекс 20–50 мм — обновите старый матрас без замены.",
-                img: "/img/mattress/topper-gelpulse.webp",
+                img: "/img/toppers/topper-cover-open.webp",
               },
             ].map((c) => (
               <Link className="cat-card" href={c.href} key={c.href}>
@@ -227,25 +248,6 @@ export default async function HomePage() {
               <LayerList layers={flagshipLayers.layers} />
             </div>
           )}
-        </div>
-      </section>
-
-      <section aria-label="Модели матрасов">
-        <div className="wrap">
-          <div className="section-head">
-            <div className="section-tag">Модели</div>
-            <h2>Популярные латексные матрасы Про-Латекс</h2>
-          </div>
-          <div className="model-grid">
-            {featured.map((m) => (
-              <ModelCard model={m} key={m.slug} />
-            ))}
-          </div>
-          <div className="center mt-40">
-            <Link href="/matrasy/" className="btn btn-primary">
-              Весь каталог из 9 моделей
-            </Link>
-          </div>
         </div>
       </section>
 

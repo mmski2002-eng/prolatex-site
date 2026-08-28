@@ -5,6 +5,7 @@ import { resolveVideo } from "@/lib/media";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import VideoBlock from "@/components/VideoBlock";
+import OriginBadge from "@/components/OriginBadge";
 
 export const metadata: Metadata = {
   title: "Производство латекса Novaya — видео с завода",
@@ -38,6 +39,7 @@ export default async function ProizvodstvoPage() {
       )}
       <section className="page-hero" style={{ paddingTop: 8 }}>
         <div className="wrap">
+          <OriginBadge />
           <h1 className="page-h1">Производство латекса Novaya</h1>
           <p className="lead">
             От плантаций гевеи до готового блока латекса — путь материала на

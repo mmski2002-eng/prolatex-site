@@ -80,8 +80,7 @@ export default function SoglasheniePage() {
               <a href="mailto:info@pro-latex.ru" className="inline-link">
                 info@pro-latex.ru
               </a>
-              . Адрес склада: 195030, Санкт-Петербург, ул. Электропультовцев,
-              д. 7, литера Н.
+              . Склады компании расположены в Москве и Санкт-Петербурге.
             </p>
           </div>
         </div>

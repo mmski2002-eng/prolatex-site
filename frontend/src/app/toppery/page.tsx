@@ -10,7 +10,7 @@ import MediaGallery from "@/components/MediaGallery";
 export const metadata: Metadata = {
   title: { absolute: "Тонкий латексный матрас — купить наматрасник из латекса, цены" },
   description:
-    "Тонкие матрасы из листового латекса Про-Латекс по технологии Pulse: толщина 20–50 мм, плотность 55/65 кг/м³, Solid/микроперфорация/7-зонная перфорация, GelPulse.",
+    "Тонкие матрасы из листового латекса Про-Латекс по технологии Dunlop: толщина 20–50 мм, плотность 55/65 кг/м³, Solid/микроперфорация/7-зонная перфорация, охлаждающая гелевая опция.",
   alternates: { canonical: "/toppery/" },
   openGraph: ogMeta({ url: "/toppery/" }),
 };
@@ -23,16 +23,16 @@ export default async function TopperyPage() {
       <Breadcrumbs items={[{ name: "Тонкие матрасы", path: "/toppery/" }]} />
       <section className="page-hero" style={{ paddingTop: 8 }}>
         <div className="wrap">
-          <h1 className="page-h1">Тонкий латексный матрас из листового латекса Pulse</h1>
+          <h1 className="page-h1">Тонкий латексный матрас из листового латекса</h1>
           <p className="lead">{data.intro}</p>
         </div>
       </section>
 
-      <section className="tint" aria-label="Варианты тонких матрасов Pulse">
+      <section className="tint" aria-label="Варианты тонких матрасов Dunlop">
         <div className="wrap">
           <div className="section-head">
             <div className="section-tag">Модели</div>
-            <h2>Варианты тонких матрасов Pulse</h2>
+            <h2>Варианты тонких матрасов</h2>
             <p>
               Четыре модели толщиной от 20 до 50 мм. Каждая доступна в двух плотностях —
               55 и 65 кг/м³. Раскрой под ваш размер матраса.
@@ -168,9 +168,9 @@ export default async function TopperyPage() {
         <div className="wrap">
           <div className="section-head">
             <div className="section-tag">Производство</div>
-            <h2>Как делают листовой латекс Pulse</h2>
+            <h2>Как делают листовой латекс</h2>
           </div>
-          <VideoBlock filename="Novaya-Sheets-Video-V4.mp4" title="Производство листового латекса Pulse" />
+          <VideoBlock filename="Novaya-Sheets-Video-V4.mp4" title="Производство листового латекса Dunlop" />
         </div>
       </section>
 
