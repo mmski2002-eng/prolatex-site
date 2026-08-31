@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import LeadForm from "./LeadForm";
+import { priceFrom } from "@/lib/format";
 
 export default function ModelBuyBox({
   modelName,
   modelSlug,
   widths,
   lengths,
+  priceFrom: price,
 }: {
   modelName: string;
   modelSlug: string;
   widths: number[];
   lengths: number[];
+  priceFrom?: number;
 }) {
   const [width, setWidth] = useState(widths[Math.floor(widths.length / 2)]);
   const [length, setLength] = useState(lengths[lengths.length - 1]);
@@ -20,6 +23,12 @@ export default function ModelBuyBox({
 
   return (
     <div>
+      {price && (
+        <div className="buybox-price">
+          <span className="buybox-price-value">{priceFrom(price)}</span>
+          <span className="buybox-price-note">Итоговая цена зависит от размера</span>
+        </div>
+      )}
       <p style={{ fontWeight: 700, marginBottom: 8, fontSize: 14 }}>
         Ширина матраса
       </p>
@@ -57,7 +66,7 @@ export default function ModelBuyBox({
         model={modelName}
         size={size}
         title="Узнать цену"
-        subtitle="Цена зависит от размера и комплектации. Оставьте заявку — менеджер посчитает точную стоимость за 15 минут."
+        subtitle="Итоговая цена зависит от размера и комплектации. Оставьте заявку — менеджер посчитает точную стоимость за 15 минут."
       />
     </div>
   );

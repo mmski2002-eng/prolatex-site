@@ -59,23 +59,59 @@
       "spring_height_cm": 16,
       "summary": "Входная модель линейки: симметричные слои латекса по 2 см с двух сторон усиленного пружинного блока 16 см.",
       "audience": "Для тех, кто хочет попробовать натуральный латекс с надёжной пружинной поддержкой — универсальная средняя жёсткость.",
-      "image": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+      "price_from": 25119,
+      "image": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
       "meta_description": "Eco Latex: слои латекса по 2 см с двух сторон пружинного блока 16 см. Высота 20 см, жёсткость средняя, размеры 80–200 см, гарантия 15–20 лет.",
       "images": [
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
           "label": "В чехле",
-          "alt": "Матрас Eco Latex в съёмном чехле"
+          "alt": "Матрас Eco Latex в съёмном чехле, вид под углом"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-spereda.webp",
+          "label": "Вид спереди",
+          "alt": "Матрас Eco Latex — вид спереди, боковина с логотипом ProLatex"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-sboku.webp",
+          "label": "Вид сбоку",
+          "alt": "Матрас Eco Latex — вид сбоку, высота и вентиляционные вставки"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
           "label": "В разрезе",
           "alt": "Матрас Eco Latex в разрезе: слои латекса и независимый пружинный блок"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-blok-v-razreze.webp",
-          "label": "Пружины в разрезе",
-          "alt": "Матрас Eco Latex — независимый пружинный блок между слоями латекса, крупный план"
+          "src": "/img/mattress/pruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Eco Latex с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Eco Latex — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sboku-ferma.webp",
+          "label": "Фото сбоку",
+          "alt": "Матрас Eco Latex — фото сбоку, съёмный чехол на молнии"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Eco Latex — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-ugol-krupno.webp",
+          "label": "Угол крупно",
+          "alt": "Матрас Eco Latex — угол и кант чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Eco Latex — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -105,22 +141,58 @@
       "spring_height_cm": 16,
       "summary": "Сбалансированная модель: по 3 см латекса с каждой стороны высокого пружинного блока 16 см.",
       "audience": "Для сна вдвоём и для тех, кто ценит выраженный комфортный слой при средней жёсткости.",
-      "image": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+      "price_from": 28359,
+      "image": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
       "images": [
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
           "label": "В чехле",
-          "alt": "Матрас Soft Relax Latex в съёмном чехле"
+          "alt": "Матрас Soft Relax Latex в съёмном чехле, вид под углом"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-spereda.webp",
+          "label": "Вид спереди",
+          "alt": "Матрас Soft Relax Latex — вид спереди, боковина с логотипом ProLatex"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-sboku.webp",
+          "label": "Вид сбоку",
+          "alt": "Матрас Soft Relax Latex — вид сбоку, высота и вентиляционные вставки"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
           "label": "В разрезе",
           "alt": "Матрас Soft Relax Latex в разрезе: слои латекса и независимый пружинный блок"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-blok-v-razreze.webp",
-          "label": "Пружины в разрезе",
-          "alt": "Матрас Soft Relax Latex — независимый пружинный блок между слоями латекса, крупный план"
+          "src": "/img/mattress/pruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Soft Relax Latex с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Soft Relax Latex — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sboku-ferma.webp",
+          "label": "Фото сбоку",
+          "alt": "Матрас Soft Relax Latex — фото сбоку, съёмный чехол на молнии"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Soft Relax Latex — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-ugol-krupno.webp",
+          "label": "Угол крупно",
+          "alt": "Матрас Soft Relax Latex — угол и кант чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Soft Relax Latex — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -150,22 +222,58 @@
       "spring_height_cm": 14,
       "summary": "Толстые слои латекса по 4 см дают глубокое контурное прилегание при стабильной пружинной основе.",
       "audience": "Для тех, кто спит на боку и хочет мягкое обволакивание плеч и бёдер без потери поддержки.",
-      "image": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+      "price_from": 32243,
+      "image": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
       "images": [
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
           "label": "В чехле",
-          "alt": "Матрас Dream Soft в съёмном чехле"
+          "alt": "Матрас Dream Soft в съёмном чехле, вид под углом"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-spereda.webp",
+          "label": "Вид спереди",
+          "alt": "Матрас Dream Soft — вид спереди, боковина с логотипом ProLatex"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-sboku.webp",
+          "label": "Вид сбоку",
+          "alt": "Матрас Dream Soft — вид сбоку, высота и вентиляционные вставки"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
           "label": "В разрезе",
           "alt": "Матрас Dream Soft в разрезе: слои латекса и независимый пружинный блок"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-blok-v-razreze.webp",
-          "label": "Пружины в разрезе",
-          "alt": "Матрас Dream Soft — независимый пружинный блок между слоями латекса, крупный план"
+          "src": "/img/mattress/pruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Dream Soft с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Dream Soft — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sboku-ferma.webp",
+          "label": "Фото сбоку",
+          "alt": "Матрас Dream Soft — фото сбоку, съёмный чехол на молнии"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Dream Soft — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-ugol-krupno.webp",
+          "label": "Угол крупно",
+          "alt": "Матрас Dream Soft — угол и кант чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Dream Soft — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -195,23 +303,59 @@
       "spring_height_cm": 14,
       "summary": "Максимальные комфортные слои — по 5 см латекса с двух сторон. Самая мягкая пружинная модель линейки.",
       "audience": "Для лёгкого и среднего веса, любителям мягкой «латексной» посадки с анатомической поддержкой.",
-      "image": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+      "price_from": 37283,
+      "image": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
       "meta_description": "Bio Latex: по 5 см латекса с двух сторон, самая мягкая пружинная модель. Высота 25 см, жёсткость мягкая, размеры 80–200 см, гарантия 15–20 лет.",
       "images": [
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
           "label": "В чехле",
-          "alt": "Матрас Bio Latex в съёмном чехле"
+          "alt": "Матрас Bio Latex в съёмном чехле, вид под углом"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-spereda.webp",
+          "label": "Вид спереди",
+          "alt": "Матрас Bio Latex — вид спереди, боковина с логотипом ProLatex"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-sboku.webp",
+          "label": "Вид сбоку",
+          "alt": "Матрас Bio Latex — вид сбоку, высота и вентиляционные вставки"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
           "label": "В разрезе",
           "alt": "Матрас Bio Latex в разрезе: слои латекса и независимый пружинный блок"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-blok-v-razreze.webp",
-          "label": "Пружины в разрезе",
-          "alt": "Матрас Bio Latex — независимый пружинный блок между слоями латекса, крупный план"
+          "src": "/img/mattress/pruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Bio Latex с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Bio Latex — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sboku-ferma.webp",
+          "label": "Фото сбоку",
+          "alt": "Матрас Bio Latex — фото сбоку, съёмный чехол на молнии"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Bio Latex — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-ugol-krupno.webp",
+          "label": "Угол крупно",
+          "alt": "Матрас Bio Latex — угол и кант чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Bio Latex — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -241,22 +385,58 @@
       "spring_height_cm": 14,
       "summary": "Асимметричная модель 2/3 см: две стороны с разным ощущением на одном пружинном блоке.",
       "audience": "Практичный выбор: переворачивайте матрас и выбирайте сторону под сезон и настроение.",
-      "image": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+      "price_from": 26483,
+      "image": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
       "images": [
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
           "label": "В чехле",
-          "alt": "Матрас Green Sleep в съёмном чехле"
+          "alt": "Матрас Green Sleep в съёмном чехле, вид под углом"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-spereda.webp",
+          "label": "Вид спереди",
+          "alt": "Матрас Green Sleep — вид спереди, боковина с логотипом ProLatex"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-sboku.webp",
+          "label": "Вид сбоку",
+          "alt": "Матрас Green Sleep — вид сбоку, высота и вентиляционные вставки"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
           "label": "В разрезе",
           "alt": "Матрас Green Sleep в разрезе: слои латекса и независимый пружинный блок"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-blok-v-razreze.webp",
-          "label": "Пружины в разрезе",
-          "alt": "Матрас Green Sleep — независимый пружинный блок между слоями латекса, крупный план"
+          "src": "/img/mattress/pruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Green Sleep с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Green Sleep — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sboku-ferma.webp",
+          "label": "Фото сбоку",
+          "alt": "Матрас Green Sleep — фото сбоку, съёмный чехол на молнии"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Green Sleep — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-ugol-krupno.webp",
+          "label": "Угол крупно",
+          "alt": "Матрас Green Sleep — угол и кант чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Green Sleep — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -287,23 +467,59 @@
       "spring_height_cm": 14,
       "summary": "Двусторонняя жёсткость: сторона 3 см — средняя, сторона 5 см — мягкая. Один матрас — два ощущения.",
       "audience": "Если не уверены в жёсткости — модель позволяет выбрать сторону под себя уже дома.",
-      "image": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+      "price_from": 32693,
+      "image": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
       "meta_description": "Real Latex: сторона 3 см — средняя, сторона 5 см — мягкая жёсткость. Высота 23 см, размеры 80–200 см, гарантия 15–20 лет на латекс.",
       "images": [
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-chekhle.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-3-4.webp",
           "label": "В чехле",
-          "alt": "Матрас Real Latex в съёмном чехле"
+          "alt": "Матрас Real Latex в съёмном чехле, вид под углом"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-spereda.webp",
+          "label": "Вид спереди",
+          "alt": "Матрас Real Latex — вид спереди, боковина с логотипом ProLatex"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-sboku.webp",
+          "label": "Вид сбоку",
+          "alt": "Матрас Real Latex — вид сбоку, высота и вентиляционные вставки"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
           "label": "В разрезе",
           "alt": "Матрас Real Latex в разрезе: слои латекса и независимый пружинный блок"
         },
         {
-          "src": "/img/mattress/pruzhinnyy-blok-v-razreze.webp",
-          "label": "Пружины в разрезе",
-          "alt": "Матрас Real Latex — независимый пружинный блок между слоями латекса, крупный план"
+          "src": "/img/mattress/pruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Real Latex с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Real Latex — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sboku-ferma.webp",
+          "label": "Фото сбоку",
+          "alt": "Матрас Real Latex — фото сбоку, съёмный чехол на молнии"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Real Latex — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-ugol-krupno.webp",
+          "label": "Угол крупно",
+          "alt": "Матрас Real Latex — угол и кант чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/pruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Real Latex — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -328,6 +544,7 @@
       "latex_total_cm": 10,
       "summary": "Моноблок из 10 см цельного бельгийского латекса: продуманный баланс упругости и объёма — работает и как самостоятельный матрас, и как тонкий матрас поверх старого основания.",
       "audience": "Тем, кто ищет беспружинный матрас с анатомической поддержкой, людям с чувствительностью к аллергенам и тем, кто хочет обновить старый матрас или разложенный диван.",
+      "price_from": 37428,
       "image": "/img/mattress/bespruzhinnyy-matras-v-chekhle.webp",
       "images": [
         {
@@ -338,17 +555,47 @@
         {
           "src": "/img/mattress/bespruzhinnyy-matras-v-chekhle-sboku.webp",
           "label": "Вид сбоку",
-          "alt": "Матрас True Rest — вид сбоку, высота матраса"
+          "alt": "Матрас True Rest — вид сбоку, высота латексного блока"
         },
         {
           "src": "/img/mattress/bespruzhinnyy-lateks-pod-chekhlom.webp",
           "label": "Латекс под чехлом",
-          "alt": "Матрас True Rest — расстёгнутый чехол, латексный блок внутри"
+          "alt": "Матрас True Rest — латексный блок под снятым чехлом"
         },
         {
           "src": "/img/mattress/bespruzhinnyy-lateks-v-razreze.webp",
           "label": "Латекс в разрезе",
-          "alt": "Матрас True Rest — перфорированный бельгийский латекс в разрезе, крупный план"
+          "alt": "Матрас True Rest — перфорированный латекс в разрезе"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас True Rest с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас True Rest — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас True Rest — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-molniya.webp",
+          "label": "Чехол на молнии",
+          "alt": "Матрас True Rest — съёмный чехол на молнии по периметру"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-molniya-krupno.webp",
+          "label": "Молния крупно",
+          "alt": "Матрас True Rest — молния чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас True Rest — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -400,6 +647,7 @@
       "latex_total_cm": 14,
       "summary": "Моноблок 14 см из бельгийского латекса: увеличенная высота усиливает анатомические свойства — выраженная поддержка тела и глубокий комфорт.",
       "audience": "Тем, кому нужна беспружинная модель с выраженным анатомическим эффектом, парам (латекс гасит колебания) и тем, кто склонен к перегреву во сне.",
+      "price_from": 40653,
       "image": "/img/mattress/bespruzhinnyy-matras-v-chekhle.webp",
       "images": [
         {
@@ -410,17 +658,47 @@
         {
           "src": "/img/mattress/bespruzhinnyy-matras-v-chekhle-sboku.webp",
           "label": "Вид сбоку",
-          "alt": "Матрас Comfort Rest — вид сбоку, высота матраса"
+          "alt": "Матрас Comfort Rest — вид сбоку, высота латексного блока"
         },
         {
           "src": "/img/mattress/bespruzhinnyy-lateks-pod-chekhlom.webp",
           "label": "Латекс под чехлом",
-          "alt": "Матрас Comfort Rest — расстёгнутый чехол, латексный блок внутри"
+          "alt": "Матрас Comfort Rest — латексный блок под снятым чехлом"
         },
         {
           "src": "/img/mattress/bespruzhinnyy-lateks-v-razreze.webp",
           "label": "Латекс в разрезе",
-          "alt": "Матрас Comfort Rest — перфорированный бельгийский латекс в разрезе, крупный план"
+          "alt": "Матрас Comfort Rest — перфорированный латекс в разрезе"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Comfort Rest с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Comfort Rest — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Comfort Rest — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-molniya.webp",
+          "label": "Чехол на молнии",
+          "alt": "Матрас Comfort Rest — съёмный чехол на молнии по периметру"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-molniya-krupno.webp",
+          "label": "Молния крупно",
+          "alt": "Матрас Comfort Rest — молния чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Comfort Rest — макросъёмка стёжки чехла"
         }
       ],
       "video": {
@@ -473,6 +751,7 @@
       "latex_total_cm": 24,
       "summary": "Флагман беспружинной линейки: два слоя латекса общей высотой 24 см — премиальная глубина комфорта.",
       "audience": "Максимальный комфорт и высота «как в лучших отелях», выдерживает высокие нагрузки.",
+      "price_from": 66115,
       "image": "/img/mattress/bespruzhinnyy-matras-v-chekhle.webp",
       "images": [
         {
@@ -483,17 +762,47 @@
         {
           "src": "/img/mattress/bespruzhinnyy-matras-v-chekhle-sboku.webp",
           "label": "Вид сбоку",
-          "alt": "Матрас Opti Rest — вид сбоку, высота матраса"
+          "alt": "Матрас Opti Rest — вид сбоку, высота латексного блока"
         },
         {
           "src": "/img/mattress/bespruzhinnyy-lateks-pod-chekhlom.webp",
           "label": "Латекс под чехлом",
-          "alt": "Матрас Opti Rest — расстёгнутый чехол, латексный блок внутри"
+          "alt": "Матрас Opti Rest — латексный блок под снятым чехлом"
         },
         {
           "src": "/img/mattress/bespruzhinnyy-lateks-v-razreze.webp",
           "label": "Латекс в разрезе",
-          "alt": "Матрас Opti Rest — перфорированный бельгийский латекс в разрезе, крупный план"
+          "alt": "Матрас Opti Rest — перфорированный латекс в разрезе"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-na-ferme.webp",
+          "label": "Спальное место",
+          "alt": "Матрас Opti Rest с латексными подушками на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-spereda-ferma.webp",
+          "label": "Фото спереди",
+          "alt": "Матрас Opti Rest — фото спереди на деревянном основании"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-sverkhu.webp",
+          "label": "Вид сверху",
+          "alt": "Матрас Opti Rest — вид сверху, стёганая поверхность чехла"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-molniya.webp",
+          "label": "Чехол на молнии",
+          "alt": "Матрас Opti Rest — съёмный чехол на молнии по периметру"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-molniya-krupno.webp",
+          "label": "Молния крупно",
+          "alt": "Матрас Opti Rest — молния чехла крупным планом"
+        },
+        {
+          "src": "/img/mattress/bespruzhinnyy-matras-tkan-krupno.webp",
+          "label": "Ткань чехла",
+          "alt": "Матрас Opti Rest — макросъёмка стёжки чехла"
         }
       ],
       "video": {

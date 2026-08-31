@@ -43,7 +43,8 @@
           "src": "/img/toppers/topper-side-cut.webp",
           "label": "Вид сбоку"
         }
-      ]
+      ],
+      "price_from": 12798
     },
     {
       "slug": "soft-cloud",
@@ -67,7 +68,8 @@
           "src": "/img/toppers/topper-side-cut.webp",
           "label": "Вид сбоку"
         }
-      ]
+      ],
+      "price_from": 14598
     },
     {
       "slug": "pure-cloud",
@@ -91,7 +93,8 @@
           "src": "/img/toppers/topper-side-cut.webp",
           "label": "Вид сбоку"
         }
-      ]
+      ],
+      "price_from": 16668
     },
     {
       "slug": "cloud-layer",
@@ -144,5 +147,17 @@
   ],
   "cut_to_size": true,
   "roll_length_m": 8,
-  "sizes_note": "Раскрой в любой размер: стандартные 80–200 см по ширине при длине 190/195/200 см, а также нестандарт по запросу."
+  "sizes_note": "Готовые размеры: 80×200, 90×200, 120×200, 140×200, 160×200 и 180×200 см, а также 200×200 см. Нестандартный раскрой — по запросу.",
+  "widths_cm": [
+    80,
+    90,
+    120,
+    140,
+    160,
+    180,
+    200
+  ],
+  "lengths_cm": [
+    200
+  ]
 }

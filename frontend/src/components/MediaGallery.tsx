@@ -26,6 +26,8 @@ export default function MediaGallery({
   const [index, setIndex] = useState(0);
   const [zoom, setZoom] = useState(false);
   const touchX = useRef<number | null>(null);
+  const thumbsRef = useRef<HTMLDivElement | null>(null);
+  const [thumbNav, setThumbNav] = useState({ prev: false, next: false });
   const current = items[index];
 
   const go = useCallback(
@@ -48,6 +50,36 @@ export default function MediaGallery({
       document.body.style.overflow = "";
     };
   }, [zoom, go]);
+
+  const syncThumbNav = useCallback(() => {
+    const el = thumbsRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setThumbNav({ prev: el.scrollLeft > 4, next: el.scrollLeft < max - 4 });
+  }, []);
+
+  useEffect(() => {
+    syncThumbNav();
+    const el = thumbsRef.current;
+    if (!el) return;
+    const onResize = () => syncThumbNav();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [syncThumbNav, items.length]);
+
+  useEffect(() => {
+    const el = thumbsRef.current;
+    const active = el?.children[index] as HTMLElement | undefined;
+    if (!el || !active) return;
+    const left = active.offsetLeft - (el.clientWidth - active.clientWidth) / 2;
+    el.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+  }, [index]);
+
+  const scrollThumbs = (dir: number) => {
+    const el = thumbsRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * Math.round(el.clientWidth * 0.8), behavior: "smooth" });
+  };
 
   if (!current) return null;
 
@@ -139,30 +171,56 @@ export default function MediaGallery({
         )}
       </div>
       {items.length > 1 && (
-        <div className="media-gallery-thumbs" role="tablist" aria-label="Медиа товара">
-          {items.map((item, i) => (
-            <button
-              key={item.src}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              className={`media-gallery-thumb${i === index ? " active" : ""}`}
-              onClick={() => setIndex(i)}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={item.type === "video" ? (item.poster ?? "") : item.src}
-                alt=""
-                width={160}
-                height={140}
-                loading="lazy"
-              />
-              {item.type === "video" && (
-                <span className="media-gallery-play" aria-hidden="true">▶</span>
-              )}
-              {item.label && <span className="media-gallery-label">{item.label}</span>}
-            </button>
-          ))}
+        <div className="media-gallery-thumbs-wrap">
+          <button
+            type="button"
+            className="media-gallery-thumbs-nav prev"
+            aria-label="Прокрутить миниатюры назад"
+            hidden={!thumbNav.prev}
+            onClick={() => scrollThumbs(-1)}
+          >
+            ‹
+          </button>
+          <div
+            className="media-gallery-thumbs"
+            role="tablist"
+            aria-label="Медиа товара"
+            ref={thumbsRef}
+            onScroll={syncThumbNav}
+          >
+            {items.map((item, i) => (
+              <button
+                key={item.src}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                className={`media-gallery-thumb${i === index ? " active" : ""}`}
+                onClick={() => setIndex(i)}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.type === "video" ? (item.poster ?? "") : item.src}
+                  alt=""
+                  width={160}
+                  height={140}
+                  loading="lazy"
+                />
+                {item.type === "video" && (
+                  <span className="media-gallery-play" aria-hidden="true">▶</span>
+                )}
+                {item.label && <span className="media-gallery-label">{item.label}</span>}
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="media-gallery-thumbs-nav next"
+            aria-label="Прокрутить миниатюры вперёд"
+            hidden={!thumbNav.next}
+            onClick={() => scrollThumbs(1)}
+          >
+            ›
+          </button>
         </div>
       )}
       {zoom && (

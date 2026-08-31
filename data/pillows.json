@@ -369,6 +369,39 @@
           "гипоаллергенный и экологичный материал",
           "долговечность и сохранение формы",
           "съёмный чехол на молнии"
+        ],
+        "price_from": 4800,
+        "gallery": [
+          {
+            "src": "/img/pillows/prolatex-podushki-na-ferme.webp",
+            "label": "Пара подушек",
+            "alt": "Латексная подушка LatexPillow — пара подушек"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-sverkhu.webp",
+            "label": "Вид сверху",
+            "alt": "Латексная подушка LatexPillow — вид сверху"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-rakurs.webp",
+            "label": "Вид под углом",
+            "alt": "Латексная подушка LatexPillow — вид под углом"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushki-krupno.webp",
+            "label": "Крупный план",
+            "alt": "Латексная подушка LatexPillow — крупный план"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-tkan-krupno.webp",
+            "label": "Ткань чехла",
+            "alt": "Латексная подушка LatexPillow — ткань чехла"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-korova.webp",
+            "label": "Натуральный латекс",
+            "alt": "Латексная подушка LatexPillow — натуральный латекс"
+          }
         ]
       },
       {
@@ -392,6 +425,39 @@
           "гипоаллергенный и экологичный материал",
           "долговечность и сохранение формы",
           "съёмный чехол на молнии"
+        ],
+        "price_from": 7900,
+        "gallery": [
+          {
+            "src": "/img/pillows/prolatex-podushki-na-ferme.webp",
+            "label": "Пара подушек",
+            "alt": "Латексная подушка TopPillow — пара подушек"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-sverkhu.webp",
+            "label": "Вид сверху",
+            "alt": "Латексная подушка TopPillow — вид сверху"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-rakurs.webp",
+            "label": "Вид под углом",
+            "alt": "Латексная подушка TopPillow — вид под углом"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushki-krupno.webp",
+            "label": "Крупный план",
+            "alt": "Латексная подушка TopPillow — крупный план"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-tkan-krupno.webp",
+            "label": "Ткань чехла",
+            "alt": "Латексная подушка TopPillow — ткань чехла"
+          },
+          {
+            "src": "/img/pillows/prolatex-podushka-korova.webp",
+            "label": "Натуральный латекс",
+            "alt": "Латексная подушка TopPillow — натуральный латекс"
+          }
         ]
       }
     ]

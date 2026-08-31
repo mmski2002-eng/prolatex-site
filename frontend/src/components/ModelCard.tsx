@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { MattressModel } from "@/lib/types";
-import { firmnessLabel } from "@/lib/format";
+import { firmnessLabel, priceFrom } from "@/lib/format";
 
 const CATEGORY_LABEL: Record<string, string> = {
   pruzhinnye: "Пружинный",
@@ -37,6 +37,7 @@ export default function ModelCard({ model }: { model: MattressModel }) {
           {model.dual_sided && <span className="tag">Две стороны</span>}
           {model.topper_cm && <span className="tag">Тонкий матрас {model.topper_cm * 10} мм</span>}
         </div>
+        {model.price_from && <div className="model-price">{priceFrom(model.price_from)}</div>}
         <span className="btn btn-outline" style={{ pointerEvents: "none" }}>
           Подробнее о модели
         </span>

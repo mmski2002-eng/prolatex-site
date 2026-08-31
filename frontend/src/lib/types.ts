@@ -54,6 +54,8 @@ export interface MattressModel {
   dual_sided?: boolean;
   summary: string;
   audience: string;
+  /** Минимальная розничная цена, ₽ (показывается как «от …»). */
+  price_from?: number;
   /** Главное фото карточки (матрас в чехле). */
   image?: string;
   image_note?: string;
@@ -110,10 +112,14 @@ export interface RetailPillow {
   hidden?: boolean;
   /** Короткие тезисы для карточки (из описания производителя). */
   benefits?: string[];
+  /** Минимальная розничная цена, ₽ (показывается как «от …»). */
+  price_from?: number;
   /** Фото модели (в чехле) + дополнительные ракурсы. */
   image?: string;
   image_latex?: string;
   image_cutaway?: string;
+  /** Фотогалерея готовой модели. */
+  gallery?: MattressImage[];
   /** Человеческое подназвание и описание для карточки (из техпаспорта). */
   subtitle?: string;
   description?: string;
@@ -166,6 +172,7 @@ export interface TopperModel {
   name: string;
   thickness_mm: number;
   summary: string;
+  price_from?: number;
   images: TopperModelImage[];
 }
 
@@ -181,6 +188,8 @@ export interface ToppersData {
   cut_to_size: boolean;
   roll_length_m: number;
   sizes_note: string;
+  widths_cm?: number[];
+  lengths_cm?: number[];
 }
 
 export interface BrandInfo {

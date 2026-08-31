@@ -153,6 +153,8 @@ export function productJsonLd(opts: {
   material?: string;
   sku?: string;
   category?: string;
+  /** Минимальная цена, ₽ — уходит в AggregateOffer.lowPrice. */
+  priceFrom?: number;
   /** Спецификации товара -> additionalProperty (PropertyValue). */
   specs?: { name: string; value: string }[];
 }) {
@@ -170,6 +172,17 @@ export function productJsonLd(opts: {
     },
     material: opts.material ?? "Натуральный латекс",
     category: opts.category ?? "Матрасы",
+    ...(opts.priceFrom
+      ? {
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "RUB",
+            lowPrice: opts.priceFrom,
+            availability: "https://schema.org/InStock",
+            url: absoluteUrl(opts.url),
+          },
+        }
+      : {}),
     ...(opts.specs && opts.specs.length
       ? {
           additionalProperty: opts.specs.map((s) => ({

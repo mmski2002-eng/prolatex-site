@@ -20,7 +20,7 @@ import SizeTable from "@/components/SizeTable";
 import ModelBuyBox from "@/components/ModelBuyBox";
 import FaqAccordion from "@/components/FaqAccordion";
 import MediaGallery from "@/components/MediaGallery";
-import { firmnessLabel } from "@/lib/format";
+import { firmnessLabel, priceFrom } from "@/lib/format";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -146,6 +146,7 @@ async function ModelPage({ slug }: { slug: string }) {
           image: model.image,
           sku: `prolatex-${model.slug}`,
           category: category?.name ?? "Матрасы",
+          priceFrom: model.price_from,
           specs: [
             { name: "Высота матраса", value: `${model.height_cm} см` },
             { name: "Жёсткость", value: model.firmness },
@@ -227,7 +228,10 @@ async function ModelPage({ slug }: { slug: string }) {
               )}
               <div className="spec-row"><span>Чехол</span><b>{data.common.cover}</b></div>
               <div className="spec-row"><span>Макс. нагрузка</span><b>{data.common.max_weight_per_place_kg} кг на спальное место</b></div>
-              <div className="spec-row"><span>Цена</span><b>По запросу</b></div>
+              <div className="spec-row">
+                <span>Цена</span>
+                <b>{model.price_from ? priceFrom(model.price_from) : "По запросу"}</b>
+              </div>
             </div>
           </div>
           <ModelBuyBox
@@ -235,6 +239,7 @@ async function ModelPage({ slug }: { slug: string }) {
             modelSlug={model.slug}
             widths={data.common.widths_cm}
             lengths={data.common.lengths_cm}
+            priceFrom={model.price_from}
           />
         </div>
       </section>

@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import VideoBlock from "@/components/VideoBlock";
 import LeadForm from "@/components/LeadForm";
 import MediaGallery from "@/components/MediaGallery";
+import { priceFrom } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: { absolute: "Тонкий латексный матрас — купить наматрасник из латекса, цены" },
@@ -33,10 +34,7 @@ export default async function TopperyPage() {
           <div className="section-head">
             <div className="section-tag">Модели</div>
             <h2>Варианты тонких матрасов</h2>
-            <p>
-              Четыре модели толщиной от 20 до 50 мм. Каждая доступна в двух плотностях —
-              55 и 65 кг/м³. Раскрой под ваш размер матраса.
-            </p>
+            <p>Четыре модели толщиной от 20 до 50 мм.</p>
           </div>
           <div className="grid-2">
             {(data.models ?? []).map((m) => (
@@ -57,6 +55,7 @@ export default async function TopperyPage() {
                     {m.summary}
                   </p>
                 </div>
+                {m.price_from && <div className="model-price mt-16">{priceFrom(m.price_from)}</div>}
                 <div className="spec-table mt-16">
                   <div className="spec-row">
                     <span>Толщина</span>
@@ -68,10 +67,12 @@ export default async function TopperyPage() {
                       <b>{d.kg_m3} кг/м³</b>
                     </div>
                   ))}
-                  <div className="spec-row">
-                    <span>Цена</span>
-                    <b>По запросу</b>
-                  </div>
+                  {!m.price_from && (
+                    <div className="spec-row">
+                      <span>Цена</span>
+                      <b>По запросу</b>
+                    </div>
+                  )}
                 </div>
                 <a href="#topper-lead" className="btn btn-sand btn-block" style={{ marginTop: 16 }}>
                   Запросить цену
@@ -178,9 +179,20 @@ export default async function TopperyPage() {
         <div className="wrap">
           <div className="section-head">
             <div className="section-tag">Размеры</div>
-            <h2>Раскрой в любой размер</h2>
+            <h2>Доступные размеры тонких матрасов</h2>
             <p>{data.sizes_note} Латекс поставляется в рулонах длиной до {data.roll_length_m} метров.</p>
           </div>
+          {data.widths_cm && data.lengths_cm && (
+            <ul className="size-chip-row">
+              {data.lengths_cm.flatMap((l) =>
+                data.widths_cm!.map((w) => (
+                  <li className="size-chip" key={`${w}x${l}`}>
+                    {w}×{l} см
+                  </li>
+                ))
+              )}
+            </ul>
+          )}
           <p style={{ color: "var(--gray)" }}>
             Хотите обновить старый матрас без замены — читайте статью{" "}
             <Link href="/blog/topper-iz-lateksa/" style={{ color: "var(--sand-deep)", fontWeight: 700 }}>

@@ -100,10 +100,6 @@ export default async function HomePage() {
                   <span className="num">15–20 лет</span>
                   <span>срок службы</span>
                 </div>
-                <div className="stat">
-                  <span className="num">9 моделей</span>
-                  <span>матрасов + подушки и тонкие матрасы</span>
-                </div>
               </div>
             </div>
           </div>
@@ -160,7 +156,7 @@ export default async function HomePage() {
                 label: "Матрасы",
                 title: "Пружинные",
                 text: "Бельгийский латекс + независимый пружинный блок с 7 анатомическими зонами.",
-                img: "/img/mattress/pruzhinnyy-matras-v-razreze.webp",
+                img: "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
               },
               {
                 href: "/matrasy/bespruzhinnye/",
@@ -234,7 +230,7 @@ export default async function HomePage() {
             <div className="layers-grid anatomy-grid">
               <div className="anatomy-photo">
                 <Image
-                  src="/img/mattress/pruzhinnyy-matras-v-razreze.webp"
+                  src="/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp"
                   alt="Матрас Eco Latex в разрезе: слои латекса и независимый пружинный блок"
                   width={1200}
                   height={588}

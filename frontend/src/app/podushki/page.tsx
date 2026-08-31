@@ -6,11 +6,12 @@ import LeadForm from "@/components/LeadForm";
 import VideoBlock from "@/components/VideoBlock";
 import HeroVideo from "@/components/HeroVideo";
 import MediaGallery from "@/components/MediaGallery";
+import { priceFrom } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: { absolute: "Латексные подушки: купить подушку из латекса, цены" },
   description:
-    "Латексные подушки Про-Латекс: LatexPillow и TopPillow с наполнителем из перфорированного бельгийского латекса и съёмным чехлом. Средняя жёсткость. Цена по запросу.",
+    "Латексные подушки Про-Латекс: LatexPillow и TopPillow с наполнителем из перфорированного бельгийского латекса и съёмным чехлом. Средняя жёсткость. LatexPillow — от 4800 ₽, TopPillow — от 7900 ₽.",
   alternates: { canonical: "/podushki/" },
   openGraph: ogMeta({ url: "/podushki/" }),
 };
@@ -61,6 +62,12 @@ export default async function PodushkiPage() {
                         ...(m.image_cutaway
                           ? [{ type: "image" as const, src: m.image_cutaway, alt: `Подушка ${m.name} — латексный наполнитель под снятым чехлом`, label: "Наполнитель" }]
                           : []),
+                        ...(m.gallery ?? []).map((g) => ({
+                          type: "image" as const,
+                          src: g.src,
+                          alt: g.alt,
+                          label: g.label,
+                        })),
                         {
                           type: "video" as const,
                           src: "/video/pillows-square.mp4",
@@ -88,6 +95,7 @@ export default async function PodushkiPage() {
                         </ul>
                       )}
                     </div>
+                    {m.price_from && <div className="model-price mt-16">{priceFrom(m.price_from)}</div>}
                     <div className="spec-table mt-16">
                       <div className="spec-row">
                         <span>Размер</span>
@@ -113,10 +121,12 @@ export default async function PodushkiPage() {
                         <span>Упаковка</span>
                         <b>{m.packaging}</b>
                       </div>
-                      <div className="spec-row">
-                        <span>Цена</span>
-                        <b>По запросу</b>
-                      </div>
+                      {!m.price_from && (
+                        <div className="spec-row">
+                          <span>Цена</span>
+                          <b>По запросу</b>
+                        </div>
+                      )}
                     </div>
                     <a
                       href="#pillow-lead"

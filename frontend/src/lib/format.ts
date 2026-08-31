@@ -67,3 +67,8 @@ export function formatRuPhoneInput(raw: string): string {
   if (d) out += `-${d}`;
   return out;
 }
+
+/** 25119 → «от 25 119 ₽». Пробелы неразрывные, чтобы цена не ломалась переносом. */
+export function priceFrom(value: number): string {
+  return `от\u00A0${value.toLocaleString("ru-RU").replace(/\s/g, "\u00A0")}\u00A0₽`;
+}
