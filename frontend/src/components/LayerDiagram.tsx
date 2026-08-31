@@ -122,9 +122,20 @@ function fallbackDetail(l: ParsedLayer): string {
   return "";
 }
 
-export function LayerList({ layers }: { layers: string[] }) {
+export function LayerList({
+  layers,
+  hideSizes = false,
+}: {
+  layers: string[];
+  /** Скрыть подпись, если она состоит только из толщины слоя («2 см»). */
+  hideSizes?: boolean;
+}) {
   const parsed = layers.map(parseLayer);
   const isSpring = (l: ParsedLayer) => /пружин/i.test(l.raw);
+  const detailOf = (l: ParsedLayer) => {
+    const detail = fallbackDetail(l);
+    return hideSizes && /^\d+([.,]\d+)?\s*см$/i.test(detail) ? "" : detail;
+  };
   return (
     <div className="layer-stack" role="list" aria-label="Слои матраса сверху вниз">
       {parsed.map((layer, i) => (
@@ -136,7 +147,7 @@ export function LayerList({ layers }: { layers: string[] }) {
         >
           <div className="layer-band-text">
             <h4>{layer.title}</h4>
-            {fallbackDetail(layer) && <p>{fallbackDetail(layer)}</p>}
+            {detailOf(layer) && <p>{detailOf(layer)}</p>}
           </div>
         </div>
       ))}

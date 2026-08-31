@@ -241,7 +241,7 @@ export default async function HomePage() {
                   Слои бельгийского латекса и независимый пружинный блок в разрезе
                 </p>
               </div>
-              <LayerList layers={flagshipLayers.layers} />
+              <LayerList layers={flagshipLayers.layers} hideSizes />
             </div>
           )}
         </div>
