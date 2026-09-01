@@ -114,7 +114,7 @@ export default async function HomePage() {
           </div>
           <div className="model-grid">
             {featured.map((m) => (
-              <ModelCard model={m} key={m.slug} />
+              <ModelCard model={m} key={m.slug} oneClickHref="#home-lead" />
             ))}
           </div>
           <div className="center mt-40">
@@ -380,7 +380,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="cta-section" aria-label="Заявка">
+      <section className="cta-section" id="home-lead" aria-label="Заявка">
         <div className="wrap cta-grid">
           <div>
             <h2>Оставьте заявку — поможем выбрать матрас</h2>

@@ -849,6 +849,7 @@ header.site-header {
   gap: 24px;
 }
 .model-card {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 0;
@@ -857,6 +858,24 @@ header.site-header {
   flex-direction: column;
   transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
   background: #fff;
+}
+.model-card:focus-within {
+  border-color: var(--sand-dark);
+}
+.model-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Ссылка «Подробнее» растянута на всю карточку, кнопка покупки — поверх неё. */
+.model-card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.model-card-buy {
+  position: relative;
+  z-index: 1;
 }
 .model-card:hover {
   border-color: var(--sand-dark);

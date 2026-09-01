@@ -8,9 +8,16 @@ const CATEGORY_LABEL: Record<string, string> = {
   bespruzhinnye: "Беспружинный",
 };
 
-export default function ModelCard({ model }: { model: MattressModel }) {
+export default function ModelCard({
+  model,
+  oneClickHref,
+}: {
+  model: MattressModel;
+  /** Якорь формы заявки: включает вторую кнопку «Купить в один клик». */
+  oneClickHref?: string;
+}) {
   return (
-    <Link href={`/matrasy/${model.slug}/`} className="model-card">
+    <div className="model-card">
       <div className="model-card-media">
         {model.image ? (
           <Image
@@ -38,10 +45,17 @@ export default function ModelCard({ model }: { model: MattressModel }) {
           {model.topper_cm && <span className="tag">Тонкий матрас {model.topper_cm * 10} мм</span>}
         </div>
         {model.price_from && <div className="model-price">{priceFrom(model.price_from)}</div>}
-        <span className="btn btn-outline" style={{ pointerEvents: "none" }}>
-          Подробнее о модели
-        </span>
+        <div className="model-card-actions">
+          <Link href={`/matrasy/${model.slug}/`} className="btn btn-outline model-card-link">
+            Подробнее о модели
+          </Link>
+          {oneClickHref && (
+            <a href={oneClickHref} className="btn btn-eco model-card-buy">
+              Купить в один клик
+            </a>
+          )}
+        </div>
       </div>
-    </Link>
+    </div>
   );
 }
