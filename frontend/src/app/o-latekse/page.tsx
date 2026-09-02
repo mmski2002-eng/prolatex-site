@@ -23,7 +23,7 @@ export default async function OLatekseePage() {
         </div>
       </section>
 
-      <section aria-label="История латекса">
+      <section className="latex-photo-bg" aria-label="История латекса">
         <div className="wrap">
           <div className="article-body">
             {content.latex_history.paragraphs.map((p, i) => (
