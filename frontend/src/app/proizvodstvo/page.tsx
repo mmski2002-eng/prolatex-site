@@ -49,7 +49,7 @@ export default async function ProizvodstvoPage() {
         </div>
       </section>
 
-      <section aria-label="Где производят латекс">
+      <section className="latex-photo-bg photo-latex-block" aria-label="Где производят латекс">
         <div className="wrap">
           <div className="section-head">
             <div className="section-tag">Бельгия</div>
