@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyPartnerToken } from "@/lib/partner-token";
-import { getAllMattresses, getPillowsData } from "@/lib/api";
+import { getAllMattresses, getPillowsData, getToppersData } from "@/lib/api";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 /**
@@ -40,9 +40,10 @@ export async function GET(req: NextRequest) {
     );
   }
   const testMode = req.nextUrl.searchParams.get("test") === "1";
-  const [mattresses, pillows] = await Promise.all([
+  const [mattresses, pillows, toppers] = await Promise.all([
     getAllMattresses(),
     getPillowsData(),
+    getToppersData(),
   ]);
 
   const offers: FeedOffer[] = [];
@@ -52,7 +53,7 @@ export async function GET(req: NextRequest) {
       id: `mattress-${m.slug}`,
       name: `Матрас ${m.name}`,
       url: `${SITE_URL}/matrasy/${m.slug}/`,
-      price: null, // появится в данных вместе с прайсом
+      price: m.price_from ?? null,
       categoryId: 1,
       picture: m.image ? `${SITE_URL}${m.image}` : undefined,
       description: m.summary,
@@ -71,7 +72,7 @@ export async function GET(req: NextRequest) {
       id: `pillow-${(p.base_model ?? p.name).toLowerCase()}`,
       name: `Латексная подушка ${p.name}`,
       url: `${SITE_URL}/podushki/`,
-      price: null,
+      price: p.price_from ?? null,
       categoryId: 2,
       picture: p.image ? `${SITE_URL}${p.image}` : undefined,
       description: `Латексная подушка ${p.name}${p.base_model ? ` на базе формы ${p.base_model}` : ""}. Упаковка: ${p.packaging.toLowerCase()}.`,
@@ -80,6 +81,22 @@ export async function GET(req: NextRequest) {
         ...(p.width_mm ? [{ name: "Ширина", value: String(p.width_mm / 10), unit: "см" }] : []),
         ...(p.height_mm ? [{ name: "Высота", value: String(p.height_mm / 10), unit: "см" }] : []),
         ...(p.base_model ? [{ name: "Форма", value: p.base_model }] : []),
+        { name: "Материал", value: "Натуральный латекс (Dunlop)" },
+      ],
+    });
+  }
+
+  for (const t of toppers.models ?? []) {
+    offers.push({
+      id: `topper-${t.slug}`,
+      name: `Тонкий матрас ${t.name}`,
+      url: `${SITE_URL}/toppery/`,
+      price: t.price_from ?? null,
+      categoryId: 3,
+      picture: t.images[0] ? `${SITE_URL}${t.images[0].src}` : undefined,
+      description: t.summary,
+      params: [
+        { name: "Толщина", value: String(t.thickness_mm), unit: "мм" },
         { name: "Материал", value: "Натуральный латекс (Dunlop)" },
       ],
     });
@@ -100,6 +117,7 @@ export async function GET(req: NextRequest) {
 <categories>
 <category id="1">Латексные матрасы</category>
 <category id="2">Латексные подушки</category>
+<category id="3">Тонкие латексные матрасы</category>
 </categories>
 <offers>
 ${published
