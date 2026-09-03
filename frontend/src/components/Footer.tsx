@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import MessengerLinks from "@/components/MessengerLinks";
 
 export default function Footer() {
   return (
@@ -41,6 +42,7 @@ export default function Footer() {
             <ul>
               <li><a href="tel:88047007750">8 (804) 700-77-50</a></li>
               <li><a href="mailto:info@pro-latex.ru">info@pro-latex.ru</a></li>
+              <li className="footer-messengers"><MessengerLinks iconsOnly /></li>
               <li>Склады: Москва и Санкт-Петербург</li>
               <li><Link href="/dostavka-i-oplata/">Доставка и оплата</Link></li>
               <li><Link href="/kontakty/">Контакты</Link></li>

@@ -2698,3 +2698,70 @@ footer.site-footer {
     );
   }
 }
+
+/* контакты: мессенджеры */
+.messengers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.messenger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px 7px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--white);
+  transition: all 0.2s var(--ease);
+}
+.messenger svg {
+  flex: none;
+}
+.messenger:hover {
+  color: #fff;
+  border-color: transparent;
+}
+.messenger-wa {
+  color: #128c4b;
+}
+.messenger-wa:hover {
+  background: #25d366;
+  color: #fff;
+}
+.messenger-tg {
+  color: #1c8ec4;
+}
+.messenger-tg:hover {
+  background: #29a4dd;
+  color: #fff;
+}
+.messenger-max {
+  color: #6a2bf5;
+}
+.messenger-max:hover {
+  background: linear-gradient(135deg, #00eaff 0%, #1591ff 45%, #8419ff 100%);
+  color: #fff;
+}
+.messenger-max:hover svg path {
+  fill: #fff;
+}
+.messengers-compact .messenger {
+  padding: 8px;
+  border-radius: 50%;
+}
+@media (max-width: 560px) {
+  .messengers {
+    justify-content: flex-start;
+  }
+}
+.footer-messengers {
+  margin: 4px 0 14px;
+}
+.footer-messengers .messengers {
+  justify-content: flex-start;
+}

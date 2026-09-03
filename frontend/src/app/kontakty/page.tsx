@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {ogMeta } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import LeadForm from "@/components/LeadForm";
+import MessengerLinks from "@/components/MessengerLinks";
 
 export const metadata: Metadata = {
   title: { absolute: "Контакты компании Про-Латекс: адрес, телефон, e-mail" },
@@ -27,6 +28,7 @@ export default function KontaktyPage() {
             <div className="spec-table">
               <div className="spec-row"><span>Телефон</span><b><a href="tel:88047007750">8 (804) 700-77-50</a></b></div>
               <div className="spec-row"><span>E-mail</span><b><a href="mailto:info@pro-latex.ru">info@pro-latex.ru</a></b></div>
+              <div className="spec-row"><span>Мессенджеры</span><b><MessengerLinks /></b></div>
               <div className="spec-row"><span>Режим работы</span><b>Ежедневно, 9:00–20:00</b></div>
               <div className="spec-row">
                 <span>Склады</span>

@@ -6,7 +6,7 @@ import LeadForm from "@/components/LeadForm";
 import VideoBlock from "@/components/VideoBlock";
 import HeroVideo from "@/components/HeroVideo";
 import MediaGallery from "@/components/MediaGallery";
-import { priceFrom } from "@/lib/format";
+import { priceRub } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: { absolute: "Латексные подушки: купить подушку из латекса, цены" },
@@ -95,7 +95,7 @@ export default async function PodushkiPage() {
                         </ul>
                       )}
                     </div>
-                    {m.price_from && <div className="model-price mt-16">{priceFrom(m.price_from)}</div>}
+                    {m.price_from && <div className="model-price mt-16">{priceRub(m.price_from)}</div>}
                     <div className="spec-table mt-16">
                       <div className="spec-row">
                         <span>Размер</span>
@@ -128,13 +128,6 @@ export default async function PodushkiPage() {
                         </div>
                       )}
                     </div>
-                    <a
-                      href="#pillow-lead"
-                      className="btn btn-sand btn-block"
-                      style={{ marginTop: 16 }}
-                    >
-                      Узнать цену
-                    </a>
                     <a href="#pillow-video" className="pillow-video-link">
                       ▶ Видео: как делают латексные подушки
                     </a>
@@ -180,13 +173,14 @@ export default async function PodushkiPage() {
           <div className="section-head">
             <div className="section-tag">Заявка</div>
             <h2>Подобрать латексную подушку</h2>
-            <p>Оставьте заявку — поможем выбрать модель, состав и жёсткость под вашу позу сна и назовём цену.</p>
+            <p>Оставьте заявку — поможем выбрать модель, состав и жёсткость под вашу позу сна, подтвердим наличие и сроки доставки.</p>
           </div>
           <div style={{ maxWidth: 560 }}>
             <LeadForm
               source="podushki-page"
-              title="Узнать цену подушки"
-              subtitle="Укажите в комментарии модель (LatexPillow или TopPillow) — ответим с точной ценой."
+              title="Оставить заявку"
+              subtitle="Укажите в комментарии модель (LatexPillow или TopPillow) — перезвоним и уточним детали заказа."
+              commentPlaceholder="Например: TopPillow, 2 штуки, доставка в Санкт-Петербург"
             />
           </div>
         </div>

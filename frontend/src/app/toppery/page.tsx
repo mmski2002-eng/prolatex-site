@@ -209,7 +209,10 @@ export default async function TopperyPage() {
             <h2>Заказать тонкий матрас под ваш размер</h2>
             <p>Укажите толщину, плотность и размер матраса — рассчитаем стоимость раскроя.</p>
           </div>
-          <LeadForm source="toppery-page" />
+          <LeadForm
+            source="toppery-page"
+            commentPlaceholder="Например: толщина 5 см, размер 160×200, плотность Dunlop Classic"
+          />
         </div>
       </section>
     </>
