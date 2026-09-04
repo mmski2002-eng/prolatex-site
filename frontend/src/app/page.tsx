@@ -156,7 +156,7 @@ export default async function HomePage() {
                 label: "Матрасы",
                 title: "Пружинные",
                 text: "Бельгийский латекс + независимый пружинный блок с 7 анатомическими зонами.",
-                img: "/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp",
+                img: "/img/mattress/pruzhinnyy-matras-belyy-v-razreze.webp",
               },
               {
                 href: "/matrasy/bespruzhinnye/",
@@ -230,7 +230,7 @@ export default async function HomePage() {
             <div className="layers-grid anatomy-grid">
               <div className="anatomy-photo">
                 <Image
-                  src="/img/mattress/pruzhinnyy-matras-studiya-v-razreze.webp"
+                  src="/img/mattress/pruzhinnyy-matras-belyy-v-razreze.webp"
                   alt="Матрас Eco Latex в разрезе: слои латекса и независимый пружинный блок"
                   width={1200}
                   height={588}
